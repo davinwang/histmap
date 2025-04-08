@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>历史事件地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <style>
-        #map {
-            height: 600px;
-            width: 100%;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        }
-        body {
-            padding: 0 20px;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>历史事件时空地图</h1>
+    <div class="loading-spinner"></div>
     <div id="map"></div>
 
+    <div class="slider-container">
+        <div class="slider"></div>
+        <div class="thumb" id="yearFrom" style="left: 20%;"></div>
+        <div class="thumb" id="yearTo" style="left: 80%;"></div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="app.js"></script>
 </body>

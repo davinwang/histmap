@@ -18,6 +18,8 @@
   {
     "event": "武昌起义",
     "year": 1911,
+    "month": 10,
+    "day": 10,
     "coordinates": [30.5355, 114.3055],
     "figure": "熊秉坤",
     "description": "辛亥革命的开端，推翻清朝统治",
@@ -26,6 +28,8 @@
   {
     "event": "开国大典",
     "year": 1949,
+    "month": 10,
+    "day": 1,
     "coordinates": [39.9040, 116.4075],
     "figure": "毛泽东",
     "description": "中华人民共和国成立仪式",
@@ -34,6 +38,8 @@
   {
     "event": "香港回归",
     "year": 1997,
+    "month": 7,
+    "day": 1,
     "coordinates": [22.3193, 114.1694],
     "figure": "邓小平",
     "description": "中国政府对香港恢复行使主权",
