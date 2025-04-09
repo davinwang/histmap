@@ -15,6 +15,32 @@ Promise.all([
         attribution: 'Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
     }).addTo(map);
 
+    // 初始化地图后添加图层控制
+    const baseLayers = {
+      'Esri': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles © Esri'
+      }),
+      'OpenStreetMap': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }),
+      'OpenTopoMap': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data: © OpenStreetMap contributors, SRTM | Map style: © OpenTopoMap (CC-BY-SA)'
+      })
+    };
+    
+    baseLayers.Esri.addTo(map);
+    
+    L.control.layers(baseLayers).addTo(map);
+    
+    // 绑定下拉菜单事件
+    document.getElementById('map-service').addEventListener('change', function(e) {
+      const selectedLayer = e.target.value;
+      Object.values(baseLayers).forEach(layer => {
+        if (map.hasLayer(layer)) map.removeLayer(layer);
+      });
+      baseLayers[selectedLayer].addTo(map);
+    });
+
     loadHistoricalEvents(map, events);
     loadingSpinner.style.display = 'none';
 }).catch(error => {
