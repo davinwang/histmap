@@ -88,3 +88,14 @@ h1 {
 .slider-container:hover .thumb {
     background: #0066b3;
 }
+
+.percentage {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #0078d4;
+    font-weight: bold;
+    pointer-events: none;
+}

@@ -11,8 +11,8 @@ Promise.all([
     const map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 5);
 
     // Add OpenStreetMap base layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
     }).addTo(map);
 
     loadHistoricalEvents(map, events);
@@ -23,6 +23,10 @@ Promise.all([
 });
 
 document.addEventListener('DOMContentLoaded', setupSlider);
+
+function formatYear(year) {
+    return year < 0 ? `公元前${Math.abs(year)}年` : `公元${year}年`;
+}
 
 function setupSlider() {
     const slider = document.querySelector('.slider');
@@ -44,6 +48,17 @@ function setupSlider() {
         let newLeft = (e.clientX - rect.left) / rect.width * 100;
         newLeft = Math.max(0, Math.min(newLeft, 100));
         currentThumb.style.left = `${newLeft}%`;
+        
+        // Update percentage display
+        const currentYear = new Date().getFullYear();
+        const minYear = -10000;
+        const year = Math.round(minYear + (currentYear - minYear) * newLeft / 100);
+        
+        if (currentThumb === thumbFrom) {
+            document.getElementById('yearFrom').textContent = formatYear(year);
+        } else {
+            document.getElementById('yearTo').textContent = formatYear(year);
+        }
     }
 
     function stopDrag() {
@@ -51,6 +66,15 @@ function setupSlider() {
         currentThumb = null;
         document.removeEventListener('mousemove', drag);
         document.removeEventListener('mouseup', stopDrag);
+        
+        // Update range display when dragging stops
+        const currentYear = new Date().getFullYear();
+        const minYear = -10000;
+        const fromPercent = parseFloat(document.getElementById('yearFrom').style.left);
+        const toPercent = parseFloat(document.getElementById('yearTo').style.left);
+        const fromYear = Math.round(minYear + (currentYear - minYear) * fromPercent / 100);
+        const toYear = Math.round(minYear + (currentYear - minYear) * toPercent / 100);
+        document.getElementById('yearRange').textContent = `${formatYear(fromYear)} - ${formatYear(toYear)}`;
     }
 
     thumbFrom.addEventListener('mousedown', startDrag);
@@ -65,10 +89,10 @@ function loadHistoricalEvents(map) {
         .then(events => {
             function formatDate(event) {
                 let year = event.year;
-                let dateStr = year < 0 ? `公元前${Math.abs(year)}年` : `${year}年`;
+                let dateStr = formatYear(year);
 
                 if (event.month) {
-                    dateStr += ` ${event.month}月`;
+                    dateStr += `${event.month}月`;
                     if (event.day) {
                         dateStr += `${event.day}日`;
                     }
