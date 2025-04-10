@@ -31,21 +31,39 @@ Promise.all([
     baseLayers.Esri.addTo(map);
     
     L.control.layers(baseLayers).addTo(map);
-    
+
     // 绑定下拉菜单事件
     document.getElementById('map-service').addEventListener('change', function(e) {
-      const selectedLayer = e.target.value;
-      Object.values(baseLayers).forEach(layer => {
-        if (map.hasLayer(layer)) map.removeLayer(layer);
+        const selectedLayer = e.target.value;
+        Object.values(baseLayers).forEach(layer => {
+          if (map.hasLayer(layer)) map.removeLayer(layer);
+        });
+        baseLayers[selectedLayer].addTo(map);
       });
-      baseLayers[selectedLayer].addTo(map);
+    
+// 添加数据源切换事件监听
+    document.getElementById('data-source').addEventListener('change', function() {
+        const source = this.value;
+        const center = map.getCenter();
+        
+        if (source === 'local') {
+        // 加载本地JSON数据
+        loadHistoricalEvents(map);
+        } else if (source === 'mongodb') {
+        // 调用MongoDB查询API
+        fetchMongoDBEvents(center.lat, center.lng);
+        } else if (source === 'elasticsearch') {
+        // 调用Elasticsearch查询API
+        fetchElasticsearchEvents(center.lat, center.lng);
+        }
     });
-
-    loadHistoricalEvents(map, events);
-    loadingSpinner.style.display = 'none';
+    
+    // 首次加载时自动触发本地数据加载
+    document.getElementById('data-source').dispatchEvent(new Event('change'));
+    // loadingSpinner.style.display = 'none';
 }).catch(error => {
     console.error('初始化失败:', error);
-    loadingSpinner.style.display = 'none';
+    // loadingSpinner.style.display = 'none';
 });
 
 document.addEventListener('DOMContentLoaded', setupSlider);
@@ -146,4 +164,47 @@ function loadHistoricalEvents(map) {
             });
         })
         .catch(error => console.error('数据加载失败:', error));
+}
+
+
+  
+// MongoDB查询函数
+function fetchMongoDBEvents(lat, lng) {
+fetch(`/api/mongodb?lat=${lat}&lng=${lng}`)
+    .then(response => response.json())
+    .then(data => {
+    updateMapWithEvents(data);
+    });
+}
+
+// Elasticsearch查询函数
+function fetchElasticsearchEvents(lat, lng) {
+fetch(`/api/elasticsearch?lat=${lat}&lng=${lng}`)
+    .then(response => response.json())
+    .then(data => {
+    updateMapWithEvents(data);
+    });
+}
+
+function updateMapWithEvents(events, map = window.map) {
+    // 清除现有标记
+    map.eachLayer(layer => {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+
+    // 添加新标记
+    events.forEach(event => {
+        const marker = L.marker(event.coordinates)
+            .addTo(map)
+            .bindPopup(`<b>${event.event}</b><br>${formatYear(event.year)}<br>人物：${event.figure}<br>描述：${event.description}<br><a href='${event.wikipedia}' target='_blank'>维基百科</a>`);
+
+        marker.on('mouseover', function() {
+            this.openPopup();
+        });
+        marker.on('mouseout', function() {
+            this.closePopup();
+        });
+    });
 }
