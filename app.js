@@ -50,9 +50,12 @@ Promise.all([
 
 document.addEventListener('DOMContentLoaded', setupSlider);
 
-function formatYear(year) {
-    return year < 0 ? `公元前${Math.abs(year)}年` : `公元${year}年`;
-}
+// 引入公共函数
+const script = document.createElement('script');
+script.src = 'common.js';
+document.head.appendChild(script);
+
+
 
 function setupSlider() {
     const slider = document.querySelector('.slider');
