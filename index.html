@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>历史事件地图</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>历史事件时空地图 <span class="year-range" id="yearRange">(公元前10000年 - 2025年)</span></h1>
-    <div id="map"></div>
 
-    <div class="slider-container">
-        <div class="slider"></div>
-        <div class="thumb" id="yearFrom" style="left: 0%;"></div>
-        <div class="thumb" id="yearTo" style="left: 100%;"></div>
-    </div>
-    <div id="layer-control">
-      <select id="map-service">
-        <option value="esri" selected>Esri</option>
-        <option value="osm">OpenStreetMap</option>
-        <option value="topo">OpenTopoMap</option>
-      </select>
-      <select id="data-source">
-        <option value="local" selected>本地</option>
-        <option value="mongodb">MongoDB</option>
-        <option value="elasticsearch">Elasticsearch</option>
-      </select>
-    </div>
-    <script type="module" src="app.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>历史事件地图</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>历史事件时空地图 <span class="year-range" id="yearRange">(公元前10000年 - 2025年)</span></h1>
+  <div id="map"></div>
+
+  <div class="slider-container">
+    <div class="slider"></div>
+    <div class="thumb" id="yearFrom" style="left: 0%;"></div>
+    <div class="thumb" id="yearTo" style="left: 100%;"></div>
+  </div>
+  <div id="layer-control">
+    <select id="map-service">
+      <option value="esri" selected>Esri</option>
+      <option value="osm">OpenStreetMap</option>
+      <option value="topo">OpenTopoMap</option>
+    </select>
+    <select id="data-source">
+      <option value="local" selected>本地</option>
+      <option value="mongodb">MongoDB</option>
+      <option value="elasticsearch">Elasticsearch</option>
+    </select>
+  </div>
+  <script type="module" src="app.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
+
 </html>

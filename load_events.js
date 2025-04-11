@@ -40,23 +40,23 @@ export function loadHistoricalEvents(map) {
 }
 
 
-  
+
 // MongoDB查询函数
 export function fetchMongoDBEvents(lat, lng) {
-fetch(`/api/mongodb?lat=${lat}&lng=${lng}`)
-    .then(response => response.json())
-    .then(data => {
-    updateMapWithEvents(data);
-    });
+    fetch(`/api/mongodb?lat=${lat}&lng=${lng}`)
+        .then(response => response.json())
+        .then(data => {
+            updateMapWithEvents(data);
+        });
 }
 
 // Elasticsearch查询函数
 export function fetchElasticsearchEvents(lat, lng) {
-fetch(`/api/elasticsearch?lat=${lat}&lng=${lng}`)
-    .then(response => response.json())
-    .then(data => {
-    updateMapWithEvents(data);
-    });
+    fetch(`/api/elasticsearch?lat=${lat}&lng=${lng}`)
+        .then(response => response.json())
+        .then(data => {
+            updateMapWithEvents(data);
+        });
 }
 
 export function updateMapWithEvents(events, map = window.map) {
@@ -73,10 +73,10 @@ export function updateMapWithEvents(events, map = window.map) {
             .addTo(map)
             .bindPopup(`<b>${event.event}</b><br>${formatYear(event.year)}<br>人物：${event.figure}<br>描述：${event.description}<br><a href='${event.wikipedia}' target='_blank'>维基百科</a>`);
 
-        marker.on('mouseover', function() {
+        marker.on('mouseover', function () {
             this.openPopup();
         });
-        marker.on('mouseout', function() {
+        marker.on('mouseout', function () {
             this.closePopup();
         });
     });
