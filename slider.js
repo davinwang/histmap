@@ -1,6 +1,7 @@
+import { formatYear } from './common.js';
 
 // 滑块功能模块
-function setupSlider() {
+export function setupSlider() {
     const slider = document.querySelector('.slider');
     const thumbFrom = document.getElementById('yearFrom');
     const thumbTo = document.getElementById('yearTo');
@@ -46,7 +47,13 @@ function setupSlider() {
         const toPercent = parseFloat(document.getElementById('yearTo').style.left);
         const fromYear = Math.round(minYear + (currentYear - minYear) * fromPercent / 100);
         const toYear = Math.round(minYear + (currentYear - minYear) * toPercent / 100);
-        document.getElementById('yearRange').textContent = `(${formatYear(fromYear)} - ${formatYear(toYear)})`;
+        console.log('滑块释放事件触发', {
+  fromPercent,
+  toPercent,
+  fromYear,
+  toYear
+});
+document.getElementById('yearRange').textContent = `(${formatYear(fromYear)} - ${formatYear(toYear)})`;
     }
 
     thumbFrom.addEventListener('mousedown', startDrag);

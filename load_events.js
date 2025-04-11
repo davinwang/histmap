@@ -1,5 +1,7 @@
 
-function loadHistoricalEvents(map) {
+import { formatYear } from './common.js';
+
+export function loadHistoricalEvents(map) {
 
     // Load historical events data
     fetch('historical_events.json')
@@ -40,7 +42,7 @@ function loadHistoricalEvents(map) {
 
   
 // MongoDB查询函数
-function fetchMongoDBEvents(lat, lng) {
+export function fetchMongoDBEvents(lat, lng) {
 fetch(`/api/mongodb?lat=${lat}&lng=${lng}`)
     .then(response => response.json())
     .then(data => {
@@ -49,7 +51,7 @@ fetch(`/api/mongodb?lat=${lat}&lng=${lng}`)
 }
 
 // Elasticsearch查询函数
-function fetchElasticsearchEvents(lat, lng) {
+export function fetchElasticsearchEvents(lat, lng) {
 fetch(`/api/elasticsearch?lat=${lat}&lng=${lng}`)
     .then(response => response.json())
     .then(data => {
@@ -57,7 +59,7 @@ fetch(`/api/elasticsearch?lat=${lat}&lng=${lng}`)
     });
 }
 
-function updateMapWithEvents(events, map = window.map) {
+export function updateMapWithEvents(events, map = window.map) {
     // 清除现有标记
     map.eachLayer(layer => {
         if (layer instanceof L.Marker) {

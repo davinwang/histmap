@@ -1,8 +1,8 @@
 
-// Initialize map with geolocation
-const loadingSpinner = document.querySelector('.loading-spinner');
-loadingSpinner.style.display = 'block';
+import { setupSlider } from './slider.js';
+import { loadHistoricalEvents, fetchMongoDBEvents, fetchElasticsearchEvents } from './load_events.js';
 
+// Initialize map with geolocation
 Promise.all([
     new Promise((resolve) => navigator.geolocation.getCurrentPosition(resolve,
         () => resolve({ coords: { latitude: 30.0586, longitude: 114.3480 } }))
@@ -61,10 +61,8 @@ Promise.all([
     
     // 首次加载时自动触发本地数据加载
     document.getElementById('data-source').dispatchEvent(new Event('change'));
-    // loadingSpinner.style.display = 'none';
 }).catch(error => {
     console.error('初始化失败:', error);
-    // loadingSpinner.style.display = 'none';
 });
 
 

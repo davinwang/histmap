@@ -9,7 +9,6 @@
 </head>
 <body>
     <h1>历史事件时空地图 <span class="year-range" id="yearRange">(公元前10000年 - 2025年)</span></h1>
-    <div class="loading-spinner"></div>
     <div id="map"></div>
 
     <div class="slider-container">
@@ -29,10 +28,7 @@
         <option value="elasticsearch">Elasticsearch</option>
       </select>
     </div>
-    <script src="common.js"></script>
+    <script type="module" src="app.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="slider.js"></script>
-    <script src="load_events.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>
