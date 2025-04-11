@@ -1,7 +1,6 @@
-import { updateDisplayedEvents } from './events.js';
 
 // 滑块功能模块
-export function setupSlider() {
+function setupSlider() {
     const slider = document.querySelector('.slider');
     const thumbFrom = document.getElementById('yearFrom');
     const thumbTo = document.getElementById('yearTo');
@@ -32,18 +31,6 @@ export function setupSlider() {
         } else {
             document.getElementById('yearTo').textContent = formatYear(year);
         }
-        
-        // Update range display during dragging
-        const fromPercent = parseFloat(thumbFrom.style.left);
-        const toPercent = parseFloat(thumbTo.style.left);
-        const fromYear = Math.round(minYear + (currentYear - minYear) * fromPercent / 100);
-        const toYear = Math.round(minYear + (currentYear - minYear) * toPercent / 100);
-        document.getElementById('yearRange').textContent = `(${formatYear(fromYear)} - ${formatYear(toYear)})`;
-        
-        // Call update function when slider changes
-// 移除导入语句，将其移到文件顶部
-// 原文件顶部添加：import { updateDisplayedEvents } from './events.js';
-        updateDisplayedEvents(fromYear, toYear);
     }
 
     function stopDrag() {
