@@ -1,7 +1,7 @@
 
 import { formatYear } from './common.js';
 
-export function loadHistoricalEvents(map) {
+export function loadHistoricalEvents(map, lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
 
     // Load historical events data
     fetch('historical_events.json')
@@ -20,21 +20,26 @@ export function loadHistoricalEvents(map) {
                 return dateStr;
             }
 
-            events.forEach(event => {
-                const marker = L.marker(event.coordinates)
-                    .addTo(map)
-                    .bindPopup(`<b>${event.event}</b><br>${formatDate(event)}<br>人物：${event.figure}<br>描述：${event.description}<br><a href='${event.wikipedia}' target='_blank'>维基百科</a>`);
+            events.filter(event => {
+                if (yearFrom !== null && event.year < yearFrom) return false;
+                if (yearTo !== null && event.year > yearTo) return false;
+                return true;
+            })
+                .forEach(event => {
+                    const marker = L.marker(event.coordinates)
+                        .addTo(map)
+                        .bindPopup(`<b>${event.event}</b><br>${formatDate(event)}<br>人物：${event.figure}<br>描述：${event.description}<br><a href='${event.wikipedia}' target='_blank'>维基百科</a>`);
 
-                // Add mouse interaction events
-                marker.on('mouseover', function () {
-                    console.log(`Marker mouseover: ${event.event}`);
-                    this.openPopup();
+                    // Add mouse interaction events
+                    marker.on('mouseover', function () {
+                        console.log(`Marker mouseover: ${event.event}`);
+                        this.openPopup();
+                    });
+                    marker.on('mouseout', function () {
+                        console.log(`Marker mouseout: ${event.event}`);
+                        this.closePopup();
+                    });
                 });
-                marker.on('mouseout', function () {
-                    console.log(`Marker mouseout: ${event.event}`);
-                    this.closePopup();
-                });
-            });
         })
         .catch(error => console.error('数据加载失败:', error));
 }
@@ -42,8 +47,8 @@ export function loadHistoricalEvents(map) {
 
 
 // MongoDB查询函数
-export function fetchMongoDBEvents(lat, lng) {
-    fetch(`/api/mongodb?lat=${lat}&lng=${lng}`)
+export function fetchMongoDBEvents(lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
+    fetch(`/api/mongodb?lat=${lat}&lon=${lon}&yearFrom=${yearFrom}&yearTo=${yearTo}`)
         .then(response => response.json())
         .then(data => {
             updateMapWithEvents(data);
@@ -51,15 +56,16 @@ export function fetchMongoDBEvents(lat, lng) {
 }
 
 // Elasticsearch查询函数
-export function fetchElasticsearchEvents(lat, lng) {
-    fetch(`/api/elasticsearch?lat=${lat}&lng=${lng}`)
+export function fetchElasticsearchEvents(lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
+    fetch(`/api/elasticsearch?lat=${lat}&lon=${lon}&yearFrom=${yearFrom}&yearTo=${yearTo}`)
         .then(response => response.json())
         .then(data => {
             updateMapWithEvents(data);
         });
 }
 
-export function updateMapWithEvents(events, map = window.map) {
+// 修复 window.map 不存在的问题，将默认值改为 null，由调用者确保传入有效的 map 对象
+export function updateMapWithEvents(events, map = null) {
     // 清除现有标记
     map.eachLayer(layer => {
         if (layer instanceof L.Marker) {
@@ -68,16 +74,22 @@ export function updateMapWithEvents(events, map = window.map) {
     });
 
     // 添加新标记
-    events.forEach(event => {
-        const marker = L.marker(event.coordinates)
-            .addTo(map)
-            .bindPopup(`<b>${event.event}</b><br>${formatYear(event.year)}<br>人物：${event.figure}<br>描述：${event.description}<br><a href='${event.wikipedia}' target='_blank'>维基百科</a>`);
+    events
+        .filter(event => {
+            if (yearFrom !== null && event.year < yearFrom) return false;
+            if (yearTo !== null && event.year > yearTo) return false;
+            return true;
+        })
+        .forEach(event => {
+            const marker = L.marker(event.coordinates)
+                .addTo(map)
+                .bindPopup(`<b>${event.event}</b><br>${formatYear(event.year)}<br>人物：${event.figure}<br>描述：${event.description}<br><a href='${event.wikipedia}' target='_blank'>维基百科</a>`);
 
-        marker.on('mouseover', function () {
-            this.openPopup();
+            marker.on('mouseover', function () {
+                this.openPopup();
+            });
+            marker.on('mouseout', function () {
+                this.closePopup();
+            });
         });
-        marker.on('mouseout', function () {
-            this.closePopup();
-        });
-    });
 }

@@ -54,6 +54,12 @@ export function setupSlider() {
             toYear
         });
         document.getElementById('yearRange').textContent = `(${formatYear(fromYear)} - ${formatYear(toYear)})`;
+        
+        // Dispatch custom event with year range
+        const event = new CustomEvent('yearRangeChanged', {
+            detail: { fromYear, toYear }
+        });
+        document.dispatchEvent(event);
     }
 
     thumbFrom.addEventListener('mousedown', startDrag);

@@ -61,6 +61,25 @@ Promise.all([
 
   // 首次加载时自动触发本地数据加载
   document.getElementById('data-source').dispatchEvent(new Event('change'));
+  
+  // Listen for year range changes and filter events
+  document.addEventListener('yearRangeChanged', (e) => {
+    const { fromYear, toYear } = e.detail;
+    const markers = document.querySelectorAll('.leaflet-marker-icon');
+    markers.forEach(marker => {
+      const year = parseInt(marker.dataset.year);
+      if (year >= fromYear && year <= toYear) {
+        marker.style.display = '';
+      } else {
+        marker.style.display = 'none';
+      }
+    });
+    
+    // Reload events when year range changes
+    if (document.getElementById('data-source').value === 'local') {
+      loadHistoricalEvents(map, null, null, null, fromYear, toYear);
+    }
+  });
 }).catch(error => {
   console.error('初始化失败:', error);
 });
