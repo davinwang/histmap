@@ -35,16 +35,15 @@ export function loadHistoricalEvents(map, lat = null, lon = null, distance = nul
                         console.log(`Marker mouseover: ${event.event}`);
                         this.openPopup();
                     });
-                    marker.on('mouseout', function () {
-                        console.log(`Marker mouseout: ${event.event}`);
-                        this.closePopup();
-                    });
+                    // leave the marker open when the mouse is over it
+                    // marker.on('mouseout', function () {
+                    //     console.log(`Marker mouseout: ${event.event}`);
+                    //     this.closePopup();
+                    // });
                 });
         })
         .catch(error => console.error('数据加载失败:', error));
 }
-
-
 
 // MongoDB查询函数
 export function fetchMongoDBEvents(lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
