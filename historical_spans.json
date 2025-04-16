@@ -1,0 +1,132 @@
+[
+  {
+    "dynasty": "夏",
+    "start_year": -2070,
+    "end_year": -1600,
+    "description": "中国历史上第一个王朝",
+    "emperors": []
+  },
+  {
+    "dynasty": "商",
+    "start_year": -1600,
+    "end_year": -1046,
+    "description": "青铜器文化高度发展",
+    "emperors": []
+  },
+  {
+    "dynasty": "周",
+    "start_year": -1046,
+    "end_year": -256,
+    "description": "分为西周和东周",
+    "emperors": []
+  },
+  {
+    "dynasty": "秦",
+    "start_year": -221,
+    "end_year": -207,
+    "description": "中国历史上第一个统一的中央集权王朝",
+    "territory": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [110.0, 35.0],
+            [115.0, 35.0],
+            [115.0, 40.0],
+            [110.0, 40.0],
+            [110.0, 35.0]
+          ]
+        ]
+      ]
+    },
+    "emperors": [
+      {
+        "庙号": "始皇帝",
+        "谥号": null,
+        "生卒年": "前259年-前210年",
+        "年号": []
+      }
+    ]
+  },
+  {
+    "dynasty": "汉",
+    "start_year": -202,
+    "end_year": 220,
+    "description": "分为西汉和东汉",
+    "territory": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [110.0, 35.0],
+            [115.0, 35.0],
+            [115.0, 40.0],
+            [110.0, 40.0],
+            [110.0, 35.0]
+          ]
+        ]
+      ]
+    },
+    "emperors": []
+  },
+  {
+    "dynasty": "唐",
+    "start_year": 618,
+    "end_year": 907,
+    "description": "中国历史上最强盛的朝代之一",
+    "emperors": []
+  },
+  {
+    "dynasty": "宋",
+    "start_year": 960,
+    "end_year": 1279,
+    "description": "分为北宋和南宋",
+    "emperors": []
+  },
+  {
+    "dynasty": "元",
+    "start_year": 1271,
+    "end_year": 1368,
+    "description": "中国历史上第一个由少数民族建立的大一统王朝",
+    "emperors": []
+  },
+  {
+    "dynasty": "明",
+    "start_year": 1368,
+    "end_year": 1644,
+    "description": "最后一个由汉族建立的大一统王朝",
+    "emperors": [
+      {
+        "庙号": "太祖",
+        "谥号": "高皇帝",
+        "生卒年": "1328年-1398年",
+        "年号": ["洪武"]
+      },
+      {
+        "庙号": "成祖",
+        "谥号": "文皇帝",
+        "生卒年": "1360年-1424年",
+        "年号": ["永乐"]
+      },
+      {
+        "庙号": "神宗",
+        "谥号": "显皇帝",
+        "生卒年": "1563年-1620年",
+        "年号": ["万历"]
+      },
+      {
+        "庙号": "思宗",
+        "谥号": "烈皇帝",
+        "生卒年": "1611年-1644年",
+        "年号": ["崇祯"]
+      }
+    ]
+  },
+  {
+    "dynasty": "清",
+    "start_year": 1636,
+    "end_year": 1912,
+    "description": "中国历史上最后一个封建王朝",
+    "emperors": []
+  }
+]
