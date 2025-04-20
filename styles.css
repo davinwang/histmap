@@ -110,3 +110,22 @@ h1 {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+
+.dynasty-marker {
+  background-color: var(--dynasty-color);
+  width: 25px;
+  height: 41px;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+}
+
+.dynasty-marker::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  top: 5px;
+  left: 7px;
+}

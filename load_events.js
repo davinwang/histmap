@@ -28,9 +28,7 @@ export function loadHistoricalEvents(map, lat = null, lon = null, distance = nul
                 .forEach(event => {
                     const marker = L.marker(event.coordinates, {
                         icon: L.divIcon({
-                            html: `<div style="background-color: ${getDynastyColor(event.dynasty)}; width: 25px; height: 41px; border-radius: 50% 50% 0 0; position: relative;">
-                                     <div style="position: absolute; width: 10px; height: 10px; background-color: white; border-radius: 50%; top: 5px; left: 7px;"></div>
-                                   </div>`,
+                            html: `<div class="dynasty-marker" style="--dynasty-color: ${getDynastyColor(event.dynasty)}"></div>`,
                             className: 'dynasty-marker',
                             iconSize: [25, 41]
                         })
