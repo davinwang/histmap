@@ -1,5 +1,5 @@
 
-import { formatYear } from './common.js';
+import { formatYear, getDynastyColor } from './common.js';
 
 export function loadHistoricalEvents(map, lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
 
@@ -26,7 +26,15 @@ export function loadHistoricalEvents(map, lat = null, lon = null, distance = nul
                 return true;
             })
                 .forEach(event => {
-                    const marker = L.marker(event.coordinates)
+                    const marker = L.marker(event.coordinates, {
+                        icon: L.divIcon({
+                            html: `<div style="background-color: ${getDynastyColor(event.dynasty)}; width: 25px; height: 41px; border-radius: 50% 50% 0 0; position: relative;">
+                                     <div style="position: absolute; width: 10px; height: 10px; background-color: white; border-radius: 50%; top: 5px; left: 7px;"></div>
+                                   </div>`,
+                            className: 'dynasty-marker',
+                            iconSize: [25, 41]
+                        })
+                    })
                         .addTo(map)
                         .bindPopup(`<b>${event.event}</b><br>${formatDate(event)}<br>人物：${event.figure}<br>描述：${event.description}<br><a href='${event.wikipedia}' target='_blank'>维基百科</a>`);
 

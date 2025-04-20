@@ -1,31 +1,5 @@
-import { formatYear, percentToYear, yearToPercent } from './common.js';
-function loadHistoricalSpans(map) {
-    fetch('historical_spans.json')
-        .then(response => response.json())
-        .then(spans => {
-            spans.forEach(span => {
-                const marker = L.marker(span.coordinates)
-                    .addTo(map)
-                    .bindPopup(`<b>${span.name}</b><br>${span.description}`);
+import { formatYear, percentToYear, yearToPercent, getDynastyColor } from './common.js';
 
-                marker.on('mouseover', function () {
-                    this.openPopup();
-                });
-            });
-        })
-        .catch(error => console.error('时空跨度数据加载失败:', error));
-}
-
-
-// 生成随机颜色
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
 
 // 滑块功能模块
 export function setupSlider() {
@@ -43,7 +17,7 @@ export function setupSlider() {
                 label.className = 'dynasty-label';
                 label.style.left = `${startPercent}%`;
                 label.style.width = `${width}%`;
-                label.style.backgroundColor = getRandomColor();
+                label.style.backgroundColor = getDynastyColor(dynasty.dynasty);
                 label.textContent = dynasty.dynasty;
 
                 slider.appendChild(label);
