@@ -116,6 +116,7 @@ h1 {
   width: 25px;
   height: 41px;
   border-radius: 50% 50% 0 0;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
   position: relative;
 }
 
