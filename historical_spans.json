@@ -25,20 +25,6 @@
     "start_year": -221,
     "end_year": -207,
     "description": "中国历史上第一个统一的中央集权王朝",
-    "territory": {
-      "type": "MultiPolygon",
-      "coordinates": [
-        [
-          [
-            [110.0, 35.0],
-            [115.0, 35.0],
-            [115.0, 40.0],
-            [110.0, 40.0],
-            [110.0, 35.0]
-          ]
-        ]
-      ]
-    },
     "emperors": [
       {
         "庙号": "始皇帝",
@@ -67,6 +53,33 @@
         ]
       ]
     },
+    "emperors": []
+  },
+  {
+    "dynasty": "三国",
+    "start_year": 220,
+    "end_year": 280,
+    "description": "魏蜀吴三国鼎立时期",
+    "emperors": []
+  },
+  {
+    "dynasty": "晋",
+    "start_year": 265,
+    "end_year": 420,
+    "description": "分为西晋和东晋",
+    "emperors": []
+  },
+  {
+    "dynasty": "南北朝",
+    "start_year": 420,
+    "end_year": 589,
+    "description": "南北政权对峙时期",
+    "emperors": []
+  },
+  {
+    "dynasty": "隋",
+    "start_year": 581,
+    "end_year": 618,
     "emperors": []
   },
   {

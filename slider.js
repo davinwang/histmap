@@ -80,6 +80,42 @@ export function setupSlider() {
 
             thumbFrom.addEventListener('mousedown', startDrag);
             thumbTo.addEventListener('mousedown', startDrag);
+            
+            // 添加滑块点击事件
+            slider.addEventListener('click', (e) => {
+                const rect = slider.getBoundingClientRect();
+                const clickPercent = (e.clientX - rect.left) / rect.width * 100;
+                
+                // 查找点击位置对应的朝代
+                const clickedDynasty = historicalSpans.find(dynasty => {
+                    const start = yearToPercent(dynasty.start_year);
+                    const end = yearToPercent(dynasty.end_year);
+                    return clickPercent >= start && clickPercent <= end;
+                });
+                
+                if (clickedDynasty) {
+                    // 更新滑块位置
+                    const startPercent = yearToPercent(clickedDynasty.start_year);
+                    const endPercent = yearToPercent(clickedDynasty.end_year);
+                    
+                    thumbFrom.style.left = `${startPercent}%`;
+                    thumbTo.style.left = `${endPercent}%`;
+                    
+                    // 更新显示文本
+                    document.getElementById('yearFrom').textContent = formatYear(clickedDynasty.start_year);
+                    document.getElementById('yearTo').textContent = formatYear(clickedDynasty.end_year);
+                    document.getElementById('yearRange').textContent = `(${formatYear(clickedDynasty.start_year)} - ${formatYear(clickedDynasty.end_year)})`;
+                    
+                    // 触发自定义事件
+                    const event = new CustomEvent('yearRangeChanged', {
+                        detail: { 
+                            fromYear: clickedDynasty.start_year, 
+                            toYear: clickedDynasty.end_year 
+                        }
+                    });
+                    document.dispatchEvent(event);
+                }
+            });
         })
         .catch(error => console.error('数据加载失败:', error));
 }
