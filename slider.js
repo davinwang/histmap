@@ -80,7 +80,8 @@ export function setupSlider() {
 
             function drag(e) {
                 if (!isDragging) return;
-                const rect = slider.getBoundingClientRect();
+                const container = document.querySelector('.slider-container');
+                const rect = container.getBoundingClientRect();
                 let newLeft = (e.clientX - rect.left) / rect.width * 100;
                 newLeft = Math.max(0, Math.min(newLeft, 100));
                 currentThumb.style.left = `${newLeft}%`;
