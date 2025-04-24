@@ -11,9 +11,9 @@ Features Under Development:
    • Other UI/UX improvements
 
 4. Known Issues:
-   • Slider length doesn't match track dimensions
+   • Slider length doesn't match Thumb movement
 
-   • Map markers display with offset issues
+   • Markers on map display with offset issues
 
    • Additional bugs to be identified and resolved
 
