@@ -76,13 +76,16 @@ export function setupSlider() {
                 currentThumb = e.target;
                 document.addEventListener('mousemove', drag);
                 document.addEventListener('mouseup', stopDrag);
+                document.addEventListener('touchmove', drag);
+                document.addEventListener('touchend', stopDrag);
             }
 
             function drag(e) {
                 if (!isDragging) return;
                 const container = document.querySelector('.slider-container');
                 const rect = container.getBoundingClientRect();
-                let newLeft = (e.clientX - rect.left) / rect.width * 100;
+                const clientX = e.clientX || e.touches[0].clientX;
+                let newLeft = (clientX - rect.left) / rect.width * 100;
                 newLeft = Math.max(0, Math.min(newLeft, 100));
                 currentThumb.style.left = `${newLeft}%`;
 
@@ -131,6 +134,8 @@ export function setupSlider() {
 
             thumbFrom.addEventListener('mousedown', startDrag);
             thumbTo.addEventListener('mousedown', startDrag);
+            thumbFrom.addEventListener('touchstart', startDrag);
+            thumbTo.addEventListener('touchstart', startDrag);
 
 
         })
