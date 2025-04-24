@@ -63,7 +63,7 @@ export function setupSlider() {
                     }
                 });
             });
-            
+
             // 添加滑块拖动功能
             const thumbFrom = document.getElementById('yearFrom');
             const thumbTo = document.getElementById('yearTo');
@@ -94,6 +94,13 @@ export function setupSlider() {
                 } else {
                     document.getElementById('yearTo').textContent = formatYear(year);
                 }
+
+                // Update year range display during dragging
+                const fromPercent = parseFloat(thumbFrom.style.left);
+                const toPercent = parseFloat(thumbTo.style.left);
+                const fromYear = percentToYear(fromPercent);
+                const toYear = percentToYear(toPercent);
+                document.getElementById('yearRange').textContent = `(${formatYear(fromYear)} - ${formatYear(toYear)})`;
             }
 
             function stopDrag() {
