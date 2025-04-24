@@ -6,22 +6,19 @@ Features Under Development:
 
 1. Internationalization: Support for multiple languages
 2. Historical Event Data Extraction: Pulling historical event data from Wikipedia
-3. Data and Interface Optimization: 
+3. User Interface Optimization: 
    • Linking map zoom levels with event importance rankings
+   • Mobile client adaptation
    • Other UI/UX improvements
-
 4. Known Issues:
    • Slider length doesn't match Thumb movement
-
    • Markers on map display with offset issues
-
    • Additional bugs to be identified and resolved
-
 
 We appreciate any contributions to help improve this project!
 
 这是一个能在历史时空下显示历史事件的网站。它使用氛围编程开发，目前95%以上的代码由AI生成。该项目在持续迭代中，欢迎提交问题、修复和贡献。目前待开发的特性有：
 1.国际化：支持多语言。
 2.从维基百科提取历史事件数据。
-3.数据与界面优化：地图缩放与事件重要性等级挂钩等等
+3.界面优化：地图缩放与事件重要性等级挂钩、移动端显示适配等等
 4.待问题问题：滑块长度与滑轨不匹配、地图标记显示偏移等等
