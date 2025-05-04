@@ -1,136 +1,117 @@
-#map {
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+#map { /* Main map container */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width of parent */
+    margin: 0; /* No margin */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* Subtle shadow */
 }
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    position: absolute;
-    top: 10px;
-    left: 50px;
-    z-index: 1002;
-    color: black;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    margin: 0;
+html, body { /* HTML and body elements */
+    height: 100%; /* Full height */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    font-family: Arial, sans-serif; /* Default font */
 }
 
-.slider-container {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: auto;
-    min-height: 60px;
-    background: rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px 20px 0 0;
-    z-index: 1000;
-    padding: 10px 20px;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+h1 { /* Main heading */
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* 10px from top */
+    left: 50px; /* 50px from left */
+    z-index: 1002; /* High z-index to stay on top */
+    color: black; /* Text color */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Text shadow */
+    margin: 0; /* No margin */
 }
 
-.slider {
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    height: 20px;
-    background: rgba(0,0,0,0.1);
-    margin-top: 0;
-    border-radius: 2px;
-    overflow: hidden;
+.slider-container { /* Container for timeline slider */
+    position: fixed; /* Fixed position at bottom */
+    bottom: 0; /* Align to bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center adjustment */
+    width: 60%; /* 60% of viewport width */
+    height: auto; /* Auto height */
+    min-height: 60px; /* Minimum height */
+    background: rgba(255,255,255,0.3); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Background blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari prefix */
+    border-radius: 20px 20px 0 0; /* Rounded top corners */
+    z-index: 1000; /* High z-index */
+    padding: 10px 20px; /* Padding inside */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* Shadow at top */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
+    gap: 10px; /* Space between children */
 }
 
-.dynasty-label {
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-    pointer-events: none;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.slider { /* Timeline slider track */
+    position: relative; /* Relative positioning */
+    z-index: 0; /* Base z-index */
+    width: 100%; /* Full width of container */
+    height: 20px; /* Fixed height */
+    background: rgba(0,0,0,0.1); /* Light background */
+    margin-top: 0; /* No top margin */
+    border-radius: 2px; /* Slightly rounded corners */
+    overflow: hidden; /* Hide overflow */
 }
 
-.thumb {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #0078d4;
-    border-radius: 50%;
-    top: 18px;
-    transform: translateX(-50%);
-    cursor: pointer;
-    user-select: none;
-    touch-action: none;
-    z-index: 1001;
-    transition: transform 0.1s;
+.dynasty-label { /* Labels for historical periods */
+    position: absolute; /* Absolute positioning */
+    z-index: 1; /* Above slider track */
+    height: 100%; /* Full height of parent */
+    display: flex; /* Flex layout */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    font-size: 10px; /* Small font size */
+    font-weight: bold; /* Bold text */
+    color: white; /* White text */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Text shadow */
+    pointer-events: none; /* Ignore mouse events */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis if text too long */
 }
 
-.thumb:active {
-    transform: translateX(-50%) scale(1.2);
+.thumb { /* Slider handle */
+    position: absolute; /* Absolute positioning */
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    background: #0078d4; /* Blue color */
+    border-radius: 50%; /* Circular shape */
+    top: 18px; /* Position from top */
+    transform: translateX(-50%); /* Center horizontally */
+    cursor: pointer; /* Pointer cursor */
+    user-select: none; /* Prevent text selection */
+    touch-action: none; /* Disable touch actions */
+    z-index: 1001; /* High z-index */
+    transition: transform 0.1s; /* Smooth transform */
 }
 
-.slider-container:hover .thumb {
-    background: #0066b3;
+#layer-control { /* Map layer control panel */
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Position from top */
+  right: 20px; /* Position from right */
+  z-index: 1000; /* High z-index */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 8px; /* Internal padding */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow */
 }
 
-.percentage {
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    color: #0078d4;
-    font-weight: bold;
-    pointer-events: none;
+.dynasty-marker { /* Marker for historical dynasties */
+  background-color: var(--dynasty-color); /* Color from CSS variable */
+  width: 25px; /* Fixed width */
+  height: 41px; /* Fixed height */
+  border-radius: 50% 50% 0 0; /* Rounded top */
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%); /* Teardrop shape */
+  position: relative; /* Relative positioning */
 }
 
-#layer-control {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 8px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.dynasty-marker {
-  background-color: var(--dynasty-color);
-  width: 25px;
-  height: 41px;
-  border-radius: 50% 50% 0 0;
-  clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-  position: relative;
-}
-
-.dynasty-marker::before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  top: 5px;
-  left: 7px;
+.dynasty-marker::before { /* Inner circle of marker */
+  content: ''; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  width: 10px; /* Fixed width */
+  height: 10px; /* Fixed height */
+  background-color: white; /* White color */
+  border-radius: 50%; /* Circular shape */
+  top: 5px; /* Position from top */
+  left: 7px; /* Position from left */
 }
