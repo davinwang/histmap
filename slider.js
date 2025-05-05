@@ -36,6 +36,40 @@ export function setupSlider() {
                     slider.appendChild(label);
                 });
 
+                // 添加滑块鼠标移入事件
+                slider.addEventListener('mouseover', (e) => {
+                    const rect = slider.getBoundingClientRect();
+                    const clickPercent = (e.clientX - rect.left) / rect.width * 100;
+
+                    // 查找点击位置对应的朝代
+                    const currentDynasty = civilization.spans.find(dynasty => {
+                        const start = yearToPercent(dynasty.start_year);
+                        const end = yearToPercent(dynasty.end_year);
+                        return clickPercent >= start && clickPercent <= end;
+                    });
+                    // popup dynasty description
+                    if (currentDynasty) {
+                        const tooltip = document.createElement('div');
+                        tooltip.className = 'dynasty-tooltip';
+                        tooltip.innerHTML = `
+                            <strong>${currentDynasty.dynasty}</strong><br>
+                            开始年份: ${formatYear(currentDynasty.start_year)}<br>
+                            结束年份: ${formatYear(currentDynasty.end_year)}<br>
+                            ${currentDynasty.description || '暂无描述'}<br>
+                        `;
+                        tooltip.style.position = 'absolute';
+                        tooltip.style.left = `${e.clientX + 10}px`;
+                        tooltip.style.top = `${e.clientY + 10}px`;
+                        document.body.appendChild(tooltip);
+                    }
+                });
+
+                // 添加滑块鼠标移出事件
+                slider.addEventListener('mouseleave', (e) => {
+                    const tooltips = document.querySelectorAll('.dynasty-tooltip');
+                    tooltips.forEach(tooltip => tooltip.remove());
+                });
+
                 // 添加滑块点击事件
                 slider.addEventListener('click', (e) => {
                     const rect = slider.getBoundingClientRect();
@@ -57,8 +91,8 @@ export function setupSlider() {
                         thumbTo.style.left = `${endPercent}%`;
 
                         // 更新显示文本
-                        document.getElementById('yearFrom').textContent = formatYear(clickedDynasty.start_year);
-                        document.getElementById('yearTo').textContent = formatYear(clickedDynasty.end_year);
+                        // document.getElementById('yearFrom').textContent = formatYear(clickedDynasty.start_year);
+                        // document.getElementById('yearTo').textContent = formatYear(clickedDynasty.end_year);
                         document.getElementById('yearRange').textContent = `(${formatYear(clickedDynasty.start_year)} - ${formatYear(clickedDynasty.end_year)})`;
 
                         // 触发自定义事件
@@ -102,9 +136,9 @@ export function setupSlider() {
                 const year = percentToYear(newLeft);
 
                 if (currentThumb === thumbFrom) {
-                    document.getElementById('yearFrom').textContent = formatYear(year);
+                    // document.getElementById('yearFrom').textContent = formatYear(year);
                 } else {
-                    document.getElementById('yearTo').textContent = formatYear(year);
+                    // document.getElementById('yearTo').textContent = formatYear(year);
                 }
 
                 // Update year range display during dragging
