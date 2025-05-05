@@ -8,11 +8,17 @@ export function setupSlider() {
         .then(response => response.json())
         .then(historicalSpans => {
             // 最多处理5组数据
-            historicalSpans.slice(0, 5).forEach((span, index) => {
+            historicalSpans.slice(0, 5).forEach((civilization, index) => {
                 const slider = document.getElementById(`slider${index}`);
                 if (!slider) return;
+                
+                // 添加civilization名称标签
+                const civLabel = document.createElement('div');
+                civLabel.className = 'civilization-label';
+                civLabel.textContent = civilization.civilization;
+                slider.appendChild(civLabel);
 
-                span.forEach(dynasty => {
+                civilization.spans.forEach(dynasty => {
                     const startPercent = yearToPercent(dynasty.start_year);
                     const endPercent = yearToPercent(dynasty.end_year);
                     const width = endPercent - startPercent;
@@ -33,7 +39,7 @@ export function setupSlider() {
                     const clickPercent = (e.clientX - rect.left) / rect.width * 100;
 
                     // 查找点击位置对应的朝代
-                    const clickedDynasty = span.find(dynasty => {
+                    const clickedDynasty = civilization.spans.find(dynasty => {
                         const start = yearToPercent(dynasty.start_year);
                         const end = yearToPercent(dynasty.end_year);
                         return clickPercent >= start && clickPercent <= end;

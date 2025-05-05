@@ -91,6 +91,17 @@ h1 { /* Main heading */
     text-overflow: ellipsis; /* Show ellipsis if text too long */
 }
 
+.civilization-label {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 2;
+}
+
 #layer-control { /* Map layer control panel */
   position: absolute; /* Absolute positioning */
   top: 20px; /* Position from top */
