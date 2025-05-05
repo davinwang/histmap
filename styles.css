@@ -22,21 +22,27 @@ h1 { /* Main heading */
     margin: 0; /* No margin */
 }
 
-.slider-container { /* Container for timeline slider */
+.slider-container-border { /* Container for timeline slider */
     position: fixed; /* Fixed position at bottom */
     bottom: 0; /* Align to bottom */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center adjustment */
-    width: 60%; /* 60% of viewport width */
+    width: 80%; /* 60% of viewport width */
     height: auto; /* Auto height */
     min-height: 60px; /* Minimum height */
     background: rgba(255,255,255,0.3); /* Semi-transparent white */
     backdrop-filter: blur(10px); /* Background blur effect */
     -webkit-backdrop-filter: blur(10px); /* Safari prefix */
-    border-radius: 20px 20px 0 0; /* Rounded top corners */
+    border-radius: 20px; /* Rounded top corners */
     z-index: 1000; /* High z-index */
-    padding: 10px 20px; /* Padding inside */
+    padding: 20px 20px; /* Padding inside */
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* Shadow at top */
+}
+
+.slider-container { /* Container for timeline slider */
+    position: relative; /* Relative positioning */
+    width: 100%; /* Full width of parent */
+    z-index: 1000; /* Above other elements */
     display: flex; /* Flex layout */
     flex-direction: column; /* Vertical stacking */
     gap: 10px; /* Space between children */
@@ -51,6 +57,21 @@ h1 { /* Main heading */
     margin-top: 0; /* No top margin */
     border-radius: 2px; /* Slightly rounded corners */
     overflow: hidden; /* Hide overflow */
+}
+
+.thumb { /* Slider handle */
+    position: absolute; /* Absolute positioning */
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    background: #0078d4; /* Blue color */
+    border-radius: 50%; /* Circular shape */
+    top: 18px; /* Position from top */
+    transform: translateX(-50%); /* Center horizontally */
+    cursor: pointer; /* Pointer cursor */
+    user-select: none; /* Prevent text selection */
+    touch-action: none; /* Disable touch actions */
+    z-index: 1001; /* High z-index */
+    transition: transform 0.1s; /* Smooth transform */
 }
 
 .dynasty-label { /* Labels for historical periods */
@@ -68,21 +89,6 @@ h1 { /* Main heading */
     white-space: nowrap; /* Prevent wrapping */
     overflow: hidden; /* Hide overflow */
     text-overflow: ellipsis; /* Show ellipsis if text too long */
-}
-
-.thumb { /* Slider handle */
-    position: absolute; /* Absolute positioning */
-    width: 20px; /* Fixed width */
-    height: 20px; /* Fixed height */
-    background: #0078d4; /* Blue color */
-    border-radius: 50%; /* Circular shape */
-    top: 18px; /* Position from top */
-    transform: translateX(-50%); /* Center horizontally */
-    cursor: pointer; /* Pointer cursor */
-    user-select: none; /* Prevent text selection */
-    touch-action: none; /* Disable touch actions */
-    z-index: 1001; /* High z-index */
-    transition: transform 0.1s; /* Smooth transform */
 }
 
 #layer-control { /* Map layer control panel */
