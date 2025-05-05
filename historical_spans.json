@@ -242,6 +242,18 @@
         "start_year": -27,
         "end_year": 476,
         "description": "罗马帝国时期"
+      },
+      {
+        "dynasty": "中世纪",
+        "start_year": 476,
+        "end_year": 1453,
+        "description": "欧洲封建制度形成和发展时期"
+      },
+      {
+        "dynasty": "文艺复兴",
+        "start_year": 1300,
+        "end_year": 1600,
+        "description": "欧洲文化艺术复兴时期"
       }
     ]
   },
