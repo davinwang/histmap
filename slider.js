@@ -63,6 +63,42 @@ export function setupSlider() {
                         document.body.appendChild(tooltip);
                     }
                 });
+                
+                // 添加触摸事件（移动端）
+                slider.addEventListener('touchstart', (e) => {
+                    const touch = e.touches[0];
+                    const rect = slider.getBoundingClientRect();
+                    const clickPercent = (touch.clientX - rect.left) / rect.width * 100;
+
+                    // 查找点击位置对应的朝代
+                    const currentDynasty = civilization.spans.find(dynasty => {
+                        const start = yearToPercent(dynasty.start_year);
+                        const end = yearToPercent(dynasty.end_year);
+                        return clickPercent >= start && clickPercent <= end;
+                    });
+                    // popup dynasty description
+                    if (currentDynasty) {
+                        const tooltip = document.createElement('div');
+                        tooltip.className = 'dynasty-tooltip';
+                        tooltip.innerHTML = `
+                            <strong>${currentDynasty.dynasty}</strong><br>
+                            开始年份: ${formatYear(currentDynasty.start_year)}<br>
+                            结束年份: ${formatYear(currentDynasty.end_year)}<br>
+                            ${currentDynasty.description || '暂无描述'}<br>
+                        `;
+                        tooltip.style.position = 'absolute';
+                        tooltip.style.left = `${touch.clientX + 10}px`;
+                        tooltip.style.top = `${touch.clientY + 10}px`;
+                        document.body.appendChild(tooltip);
+                        
+                        // 添加触摸结束事件
+                        const removeTooltip = () => {
+                            tooltip.remove();
+                            document.removeEventListener('touchend', removeTooltip);
+                        };
+                        document.addEventListener('touchend', removeTooltip);
+                    }
+                });
 
                 // 添加滑块鼠标移出事件
                 slider.addEventListener('mouseleave', (e) => {
