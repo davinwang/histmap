@@ -7,10 +7,13 @@ export function setupSlider() {
     fetch('historical_spans.json')
         .then(response => response.json())
         .then(historicalSpans => {
-            // 最多处理5组数据
-            historicalSpans.slice(0, 5).forEach((civilization, index) => {
-                const slider = document.getElementById(`slider${index}`);
-                if (!slider) return;
+            // Process all available civilizations
+            historicalSpans.forEach((civilization, index) => {
+                const sliderContainer = document.getElementById('sliders-container');
+                const slider = document.createElement('div');
+                slider.className = 'slider';
+                slider.id = `slider${index}`;
+                sliderContainer.insertBefore(slider, document.getElementById('yearFrom'));
                 
                 // 添加civilization名称标签
                 const civLabel = document.createElement('div');

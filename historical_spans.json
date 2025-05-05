@@ -1,6 +1,6 @@
 [
   {
-    "civilization": "中国",
+    "civilization": "东亚文明(中国)",
     "spans": [
       {
         "dynasty": "夏",
@@ -88,36 +88,54 @@
     ]
   },
   {
-    "civilization": "古埃及",
+    "civilization": "南亚文明(古印度)",
     "spans": [
       {
-        "dynasty": "早王朝时期",
-        "start_year": -3100,
-        "end_year": -2686,
-        "description": "埃及统一的开始，包括第1-2王朝"
+        "dynasty": "印度河流域文明",
+        "start_year": -2600,
+        "end_year": -1900,
+        "description": "南亚最早的文明"
       },
       {
-        "dynasty": "古王国时期",
-        "start_year": -2686,
-        "end_year": -2181,
-        "description": "金字塔建造的黄金时代，包括第3-6王朝"
+        "dynasty": "吠陀时期",
+        "start_year": -1500,
+        "end_year": -500,
+        "description": "吠陀文献形成时期"
       },
       {
-        "dynasty": "中王国时期",
-        "start_year": -2055,
-        "end_year": -1650,
-        "description": "埃及复兴时期，包括第11-12王朝"
+        "dynasty": "十六雄国时期",
+        "start_year": -600,
+        "end_year": -300,
+        "description": "印度次大陆列国争霸时期"
       },
       {
-        "dynasty": "新王国时期",
-        "start_year": -1550,
-        "end_year": -1069,
-        "description": "埃及帝国时期，包括第18-20王朝"
+        "dynasty": "孔雀王朝",
+        "start_year": -322,
+        "end_year": -185,
+        "description": "印度第一个统一帝国"
+      },
+      {
+        "dynasty": "笈多王朝",
+        "start_year": 320,
+        "end_year": 550,
+        "description": "印度古典黄金时代"
+      },
+      {
+        "dynasty": "德里苏丹国",
+        "start_year": 1206,
+        "end_year": 1526,
+        "description": "北印度伊斯兰政权"
+      },
+      {
+        "dynasty": "莫卧儿帝国",
+        "start_year": 1526,
+        "end_year": 1857,
+        "description": "印度最后一个大帝国"
       }
     ]
   },
   {
-    "civilization": "两河流域文明",
+    "civilization": "西亚文明(两河流域)",
     "spans": [
       {
         "dynasty": "苏美尔早王朝",
@@ -148,6 +166,35 @@
         "start_year": -626,
         "end_year": -539,
         "description": "尼布甲尼撒二世统治时期"
+      }
+    ]
+  },
+  {
+    "civilization": "北非文明(古埃及)",
+    "spans": [
+      {
+        "dynasty": "早王朝时期",
+        "start_year": -3100,
+        "end_year": -2686,
+        "description": "埃及统一的开始，包括第1-2王朝"
+      },
+      {
+        "dynasty": "古王国时期",
+        "start_year": -2686,
+        "end_year": -2181,
+        "description": "金字塔建造的黄金时代，包括第3-6王朝"
+      },
+      {
+        "dynasty": "中王国时期",
+        "start_year": -2055,
+        "end_year": -1650,
+        "description": "埃及复兴时期，包括第11-12王朝"
+      },
+      {
+        "dynasty": "新王国时期",
+        "start_year": -1550,
+        "end_year": -1069,
+        "description": "埃及帝国时期，包括第18-20王朝"
       }
     ]
   },
