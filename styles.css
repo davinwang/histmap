@@ -50,7 +50,7 @@ h1 { /* Main heading */
 
 .slider { /* Timeline slider track */
     position: relative; /* Relative positioning */
-    z-index: 0; /* Base z-index */
+    z-index: 1001; /* Base z-index */
     width: 100%; /* Full width of container */
     height: 20px; /* Fixed height */
     background: rgba(0,0,0,0.1); /* Light background */
@@ -76,7 +76,7 @@ h1 { /* Main heading */
 
 .dynasty-label { /* Labels for historical periods */
     position: absolute; /* Absolute positioning */
-    z-index: 1; /* Above slider track */
+    z-index: 1003; /* Above slider track */
     height: 100%; /* Full height of parent */
     display: flex; /* Flex layout */
     align-items: center; /* Vertical centering */
@@ -99,7 +99,7 @@ h1 { /* Main heading */
     color: white;
     font-weight: bold;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1000;
 }
 
 .dynasty-tooltip {

@@ -3,83 +3,97 @@
     "civilization": "东亚文明(中国)",
     "spans": [
       {
+        "span": "xia",
         "dynasty": "夏",
         "start_year": -2070,
         "end_year": -1600,
         "description": "中国历史上第一个王朝"
       },
       {
+        "span": "shang",
         "dynasty": "商",
         "start_year": -1600,
         "end_year": -1046,
         "description": "青铜器文化高度发展"
       },
       {
+        "span": "zhou",
         "dynasty": "周",
         "start_year": -1046,
         "end_year": -256,
         "description": "分为西周和东周"
       },
       {
+        "span": "qin",
         "dynasty": "秦",
         "start_year": -221,
         "end_year": -207,
         "description": "中国历史上第一个统一的中央集权王朝"
       },
       {
+        "span": "han",
         "dynasty": "汉",
         "start_year": -202,
         "end_year": 220,
         "description": "分为西汉和东汉"
       },
       {
+        "span": "sanguo",
         "dynasty": "三国",
         "start_year": 220,
         "end_year": 280,
         "description": "魏蜀吴三国鼎立时期"
       },
       {
+        "span": "jin",
         "dynasty": "晋",
         "start_year": 265,
         "end_year": 420,
         "description": "分为西晋和东晋"
       },
       {
+        "span": "nanbeichao",
         "dynasty": "南北朝",
         "start_year": 420,
         "end_year": 589,
         "description": "南北政权对峙时期"
       },
       {
+        "span": "sui",
         "dynasty": "隋",
         "start_year": 581,
         "end_year": 618
       },
       {
+        "span": "tang",
         "dynasty": "唐",
         "start_year": 618,
         "end_year": 907,
         "description": "中国历史上最强盛的朝代之一"
       },
       {
+        "span": "song",
         "dynasty": "宋",
         "start_year": 960,
         "end_year": 1279,
         "description": "分为北宋和南宋"
       },
       {
+        "span": "yuan",
         "dynasty": "元",
         "start_year": 1271,
         "end_year": 1368,
         "description": "中国历史上第一个由少数民族建立的大一统王朝"
       },
       {
+        "span": "ming",
         "dynasty": "明",
         "start_year": 1368,
         "end_year": 1644,
         "description": "最后一个由汉族建立的大一统王朝"
       },
       {
+        "span": "qing",
         "dynasty": "清",
         "start_year": 1636,
         "end_year": 1912,
@@ -91,42 +105,49 @@
     "civilization": "南亚文明(古印度)",
     "spans": [
       {
+        "span": "indus valley civilization",
         "dynasty": "印度河流域文明",
         "start_year": -2600,
         "end_year": -1900,
         "description": "南亚最早的文明"
       },
       {
+        "span": "vedic period",
         "dynasty": "吠陀时期",
         "start_year": -1500,
         "end_year": -500,
         "description": "吠陀文献形成时期"
       },
       {
+        "span": "mahajanapadas",
         "dynasty": "十六雄国时期",
         "start_year": -600,
         "end_year": -300,
         "description": "印度次大陆列国争霸时期"
       },
       {
+        "span": "maurya empire",
         "dynasty": "孔雀王朝",
         "start_year": -322,
         "end_year": -185,
         "description": "印度第一个统一帝国"
       },
       {
+        "span": "gupta empire",
         "dynasty": "笈多王朝",
         "start_year": 320,
         "end_year": 550,
         "description": "印度古典黄金时代"
       },
       {
+        "span": "delhi sultanate",
         "dynasty": "德里苏丹国",
         "start_year": 1206,
         "end_year": 1526,
         "description": "北印度伊斯兰政权"
       },
       {
+        "span": "mughal empire",
         "dynasty": "莫卧儿帝国",
         "start_year": 1526,
         "end_year": 1857,
@@ -138,30 +159,35 @@
     "civilization": "西亚文明(两河流域)",
     "spans": [
       {
+        "span": "early dynastic sumer",
         "dynasty": "苏美尔早王朝",
         "start_year": -2900,
         "end_year": -2334,
         "description": "两河流域最早的城邦文明"
       },
       {
+        "span": "akkadian empire",
         "dynasty": "阿卡德帝国",
         "start_year": -2334,
         "end_year": -2154,
         "description": "第一个统一两河流域的帝国"
       },
       {
+        "span": "third dynasty of ur",
         "dynasty": "乌尔第三王朝",
         "start_year": -2112,
         "end_year": -2004,
         "description": "苏美尔文明复兴时期"
       },
       {
+        "span": "old babylonian empire",
         "dynasty": "古巴比伦王朝",
         "start_year": -1894,
         "end_year": -1595,
         "description": "汉谟拉比法典制定时期"
       },
       {
+        "span": "neo-babylonian empire",
         "dynasty": "新巴比伦帝国",
         "start_year": -626,
         "end_year": -539,
@@ -173,24 +199,28 @@
     "civilization": "北非文明(古埃及)",
     "spans": [
       {
+        "span": "early dynastic period",
         "dynasty": "早王朝时期",
         "start_year": -3100,
         "end_year": -2686,
         "description": "埃及统一的开始，包括第1-2王朝"
       },
       {
+        "span": "old kingdom",
         "dynasty": "古王国时期",
         "start_year": -2686,
         "end_year": -2181,
         "description": "金字塔建造的黄金时代，包括第3-6王朝"
       },
       {
+        "span": "middle kingdom",
         "dynasty": "中王国时期",
         "start_year": -2055,
         "end_year": -1650,
         "description": "埃及复兴时期，包括第11-12王朝"
       },
       {
+        "span": "new kingdom",
         "dynasty": "新王国时期",
         "start_year": -1550,
         "end_year": -1069,
@@ -202,54 +232,63 @@
     "civilization": "欧洲文明",
     "spans": [
       {
+        "span": "minoan civilization",
         "dynasty": "米诺斯文明",
         "start_year": -2700,
         "end_year": -1450,
         "description": "克里特岛青铜时代文明"
       },
       {
+        "span": "mycenaean greece",
         "dynasty": "迈锡尼文明",
         "start_year": -1600,
         "end_year": -1100,
         "description": "希腊本土青铜时代文明"
       },
       {
+        "span": "archaic greece",
         "dynasty": "古风时期",
         "start_year": -800,
         "end_year": -480,
         "description": "希腊城邦形成时期"
       },
       {
+        "span": "classical greece",
         "dynasty": "古典希腊",
         "start_year": -480,
         "end_year": -323,
         "description": "希腊文化黄金时代"
       },
       {
+        "span": "roman kingdom",
         "dynasty": "罗马王政时期",
         "start_year": -753,
         "end_year": -509,
         "description": "罗马王国时期"
       },
       {
+        "span": "roman republic",
         "dynasty": "罗马共和国",
         "start_year": -509,
         "end_year": -27,
         "description": "罗马共和制度时期"
       },
       {
+        "span": "roman empire",
         "dynasty": "罗马帝国",
         "start_year": -27,
         "end_year": 476,
         "description": "罗马帝国时期"
       },
       {
+        "span": "middle ages",
         "dynasty": "中世纪",
         "start_year": 476,
         "end_year": 1453,
         "description": "欧洲封建制度形成和发展时期"
       },
       {
+        "span": "renaissance",
         "dynasty": "文艺复兴",
         "start_year": 1300,
         "end_year": 1600,
@@ -261,12 +300,14 @@
     "civilization": "美洲文明",
     "spans": [
       {
+        "span": "olmec civilization",
         "dynasty": "奥尔梅克文明",
         "start_year": -1200,
         "end_year": -400,
         "description": "中美洲母文明"
       },
       {
+        "span": "classic maya",
         "dynasty": "玛雅古典期",
         "start_year": 250,
         "end_year": 900,
