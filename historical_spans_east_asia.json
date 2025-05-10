@@ -1,0 +1,346 @@
+[
+  {
+    "civilization": "中国",
+    "spans": [
+      {
+        "span": "xia",
+        "dynasty": "夏",
+        "start_year": -2070,
+        "end_year": -1600,
+        "description": "中国历史上第一个王朝"
+      },
+      {
+        "span": "shang",
+        "dynasty": "商",
+        "start_year": -1600,
+        "end_year": -1046,
+        "description": "青铜器文化高度发展"
+      },
+      {
+        "span": "zhou",
+        "dynasty": "周",
+        "start_year": -1046,
+        "end_year": -256,
+        "description": "分为西周和东周"
+      },
+      {
+        "span": "qin",
+        "dynasty": "秦",
+        "start_year": -221,
+        "end_year": -207,
+        "description": "中国历史上第一个统一的中央集权王朝"
+      },
+      {
+        "span": "han",
+        "dynasty": "汉",
+        "start_year": -202,
+        "end_year": 220,
+        "description": "分为西汉和东汉"
+      },
+      {
+        "span": "sanguo",
+        "dynasty": "三国",
+        "start_year": 220,
+        "end_year": 280,
+        "description": "魏蜀吴三国鼎立时期"
+      },
+      {
+        "span": "jin",
+        "dynasty": "晋",
+        "start_year": 265,
+        "end_year": 420,
+        "description": "分为西晋和东晋"
+      },
+      {
+        "span": "nanbeichao",
+        "dynasty": "南北朝",
+        "start_year": 420,
+        "end_year": 589,
+        "description": "南北政权对峙时期"
+      },
+      {
+        "span": "sui",
+        "dynasty": "隋",
+        "start_year": 581,
+        "end_year": 618
+      },
+      {
+        "span": "tang",
+        "dynasty": "唐",
+        "start_year": 618,
+        "end_year": 907,
+        "description": "中国历史上最强盛的朝代之一"
+      },
+      {
+        "span": "song",
+        "dynasty": "宋",
+        "start_year": 960,
+        "end_year": 1279,
+        "description": "分为北宋和南宋"
+      },
+      {
+        "span": "yuan",
+        "dynasty": "元",
+        "start_year": 1271,
+        "end_year": 1368,
+        "description": "中国历史上第一个由少数民族建立的大一统王朝"
+      },
+      {
+        "span": "ming",
+        "dynasty": "明",
+        "start_year": 1368,
+        "end_year": 1644,
+        "description": "最后一个由汉族建立的大一统王朝"
+      },
+      {
+        "span": "qing",
+        "dynasty": "清",
+        "start_year": 1636,
+        "end_year": 1912,
+        "description": "中国历史上最后一个封建王朝"
+      }
+    ]
+  },
+  {
+    "civilization": "韩国",
+    "spans": [
+      {
+        "span": "gojoseon",
+        "dynasty": "古朝鲜",
+        "start_year": -2333,
+        "end_year": -108,
+        "description": "韩国最早的王朝"
+      },
+      {
+        "span": "three kingdoms",
+        "dynasty": "三国时代",
+        "start_year": 57,
+        "end_year": 668,
+        "description": "高句丽、百济、新罗三国鼎立时期"
+      },
+      {
+        "span": "unified silla",
+        "dynasty": "统一新罗",
+        "start_year": 668,
+        "end_year": 935,
+        "description": "新罗统一朝鲜半岛"
+      },
+      {
+        "span": "goryeo",
+        "dynasty": "高丽",
+        "start_year": 918,
+        "end_year": 1392,
+        "description": "佛教文化繁荣时期"
+      },
+      {
+        "span": "joseon",
+        "dynasty": "朝鲜",
+        "start_year": 1392,
+        "end_year": 1897,
+        "description": "朝鲜半岛最后一个封建王朝"
+      }
+    ]
+  },
+  {
+    "civilization": "东南亚",
+    "spans": [
+      {
+        "span": "funan",
+        "dynasty": "扶南",
+        "start_year": 50,
+        "end_year": 550,
+        "description": "东南亚最早的印度化国家"
+      },
+      {
+        "span": "srivijaya",
+        "dynasty": "室利佛逝",
+        "start_year": 650,
+        "end_year": 1377,
+        "description": "马来群岛的海上帝国"
+      },
+      {
+        "span": "angkor",
+        "dynasty": "吴哥",
+        "start_year": 802,
+        "end_year": 1431,
+        "description": "柬埔寨高棉帝国鼎盛时期"
+      },
+      {
+        "span": "majapahit",
+        "dynasty": "满者伯夷",
+        "start_year": 1293,
+        "end_year": 1527,
+        "description": "爪哇最后一个印度教大帝国"
+      },
+      {
+        "span": "ayutthaya",
+        "dynasty": "阿瑜陀耶",
+        "start_year": 1351,
+        "end_year": 1767,
+        "description": "泰国历史上的重要王朝"
+      }
+    ]
+  },
+  {
+    "civilization": "日本",
+    "spans": [
+      {
+        "span": "jomon",
+        "dynasty": "绳文时代",
+        "start_year": -14000,
+        "end_year": -300,
+        "description": "日本最古老的文明时期"
+      },
+      {
+        "span": "yayoi",
+        "dynasty": "弥生时代",
+        "start_year": -300,
+        "end_year": 250,
+        "description": "水稻种植和金属器具传入日本"
+      },
+      {
+        "span": "kofun",
+        "dynasty": "古坟时代",
+        "start_year": 250,
+        "end_year": 538,
+        "description": "大和政权兴起时期"
+      },
+      {
+        "span": "asuka",
+        "dynasty": "飞鸟时代",
+        "start_year": 538,
+        "end_year": 710,
+        "description": "佛教传入日本"
+      },
+      {
+        "span": "nara",
+        "dynasty": "奈良时代",
+        "start_year": 710,
+        "end_year": 794,
+        "description": "日本首个固定首都时期"
+      },
+      {
+        "span": "heian",
+        "dynasty": "平安时代",
+        "start_year": 794,
+        "end_year": 1185,
+        "description": "贵族文化鼎盛时期"
+      },
+      {
+        "span": "kamakura",
+        "dynasty": "镰仓时代",
+        "start_year": 1185,
+        "end_year": 1333,
+        "description": "武士政权建立"
+      },
+      {
+        "span": "muromachi",
+        "dynasty": "室町时代",
+        "start_year": 1336,
+        "end_year": 1573,
+        "description": "足利幕府统治时期"
+      },
+      {
+        "span": "azuchi-momoyama",
+        "dynasty": "安土桃山时代",
+        "start_year": 1573,
+        "end_year": 1603,
+        "description": "战国时代末期"
+      },
+      {
+        "span": "edo",
+        "dynasty": "江户时代",
+        "start_year": 1603,
+        "end_year": 1868,
+        "description": "德川幕府统治时期"
+      },
+      {
+        "span": "meiji",
+        "dynasty": "明治时代",
+        "start_year": 1868,
+        "end_year": 1912,
+        "description": "日本现代化开端"
+      }
+    ]
+  },
+  {
+    "civilization": "韩国",
+    "spans": [
+      {
+        "span": "gojoseon",
+        "dynasty": "古朝鲜",
+        "start_year": -2333,
+        "end_year": -108,
+        "description": "韩国最早的王朝"
+      },
+      {
+        "span": "three kingdoms",
+        "dynasty": "三国时代",
+        "start_year": 57,
+        "end_year": 668,
+        "description": "高句丽、百济、新罗三国鼎立时期"
+      },
+      {
+        "span": "unified silla",
+        "dynasty": "统一新罗",
+        "start_year": 668,
+        "end_year": 935,
+        "description": "新罗统一朝鲜半岛"
+      },
+      {
+        "span": "goryeo",
+        "dynasty": "高丽",
+        "start_year": 918,
+        "end_year": 1392,
+        "description": "佛教文化繁荣时期"
+      },
+      {
+        "span": "joseon",
+        "dynasty": "朝鲜",
+        "start_year": 1392,
+        "end_year": 1897,
+        "description": "朝鲜半岛最后一个封建王朝"
+      }
+    ]
+  },
+  {
+    "civilization": "东南亚",
+    "spans": [
+      {
+        "span": "funan",
+        "dynasty": "扶南",
+        "start_year": 50,
+        "end_year": 550,
+        "description": "东南亚最早的印度化国家"
+      },
+      {
+        "span": "srivijaya",
+        "dynasty": "室利佛逝",
+        "start_year": 650,
+        "end_year": 1377,
+        "description": "马来群岛的海上帝国"
+      },
+      {
+        "span": "angkor",
+        "dynasty": "吴哥",
+        "start_year": 802,
+        "end_year": 1431,
+        "description": "柬埔寨高棉帝国鼎盛时期"
+      },
+      {
+        "span": "majapahit",
+        "dynasty": "满者伯夷",
+        "start_year": 1293,
+        "end_year": 1527,
+        "description": "爪哇最后一个印度教大帝国"
+      },
+      {
+        "span": "ayutthaya",
+        "dynasty": "阿瑜陀耶",
+        "start_year": 1351,
+        "end_year": 1767,
+        "description": "泰国历史上的重要王朝"
+      }
+    ]
+  }
+]

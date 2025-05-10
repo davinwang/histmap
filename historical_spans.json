@@ -1,6 +1,7 @@
 [
   {
     "civilization": "东亚文明(中国)",
+    "drilldown":"historical_spans_east_asia.json",
     "spans": [
       {
         "span": "xia",
