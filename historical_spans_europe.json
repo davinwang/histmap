@@ -1,0 +1,132 @@
+[
+  {
+    "civilization": "古希腊",
+    "drillup":"historical_spans.json",
+    "spans": [
+      {
+        "span": "minoan",
+        "dynasty": "米诺斯文明",
+        "start_year": -2700,
+        "end_year": -1450,
+        "description": "克里特岛青铜时代文明"
+      },
+      {
+        "span": "mycenaean",
+        "dynasty": "迈锡尼文明",
+        "start_year": -1600,
+        "end_year": -1100,
+        "description": "希腊本土青铜时代晚期文明"
+      },
+      {
+        "span": "archaic",
+        "dynasty": "古风时期",
+        "start_year": -800,
+        "end_year": -480,
+        "description": "城邦形成时期"
+      },
+      {
+        "span": "classical",
+        "dynasty": "古典希腊",
+        "start_year": -480,
+        "end_year": -323,
+        "description": "希腊文化黄金时代"
+      },
+      {
+        "span": "hellenistic",
+        "dynasty": "希腊化时期",
+        "start_year": -323,
+        "end_year": -146,
+        "description": "希腊文化传播时期"
+      }
+    ]
+  },
+  {
+    "civilization": "古罗马",
+    "drillup":"historical_spans.json",
+    "spans": [
+      {
+        "span": "kingdom",
+        "dynasty": "罗马王政时期",
+        "start_year": -753,
+        "end_year": -509,
+        "description": "传说中的建国时期"
+      },
+      {
+        "span": "republic",
+        "dynasty": "罗马共和国",
+        "start_year": -509,
+        "end_year": -27,
+        "description": "共和政府时期"
+      },
+      {
+        "span": "empire",
+        "dynasty": "罗马帝国",
+        "start_year": -27,
+        "end_year": 476,
+        "description": "帝国时期"
+      }
+    ]
+  },
+  {
+    "civilization": "中世纪欧洲",
+    "drillup":"historical_spans.json",
+    "spans": [
+      {
+        "span": "early",
+        "dynasty": "中世纪早期",
+        "start_year": 476,
+        "end_year": 1000,
+        "description": "民族大迁徙与封建制度形成"
+      },
+      {
+        "span": "high",
+        "dynasty": "中世纪盛期",
+        "start_year": 1000,
+        "end_year": 1300,
+        "description": "文化与经济发展时期"
+      },
+      {
+        "span": "late",
+        "dynasty": "中世纪晚期",
+        "start_year": 1300,
+        "end_year": 1453,
+        "description": "危机与转型时期"
+      },
+      {
+        "span": "renaissance",
+        "dynasty": "文艺复兴",
+        "start_year": 1300,
+        "end_year": 1500,
+        "description": "文化复兴"
+      },
+      {
+        "span": "reformation",
+        "dynasty": "宗教改革",
+        "start_year": 1517,
+        "end_year": 1648,
+        "description": "宗教改革运动"
+      },
+      {
+        "span": "enlightenment",
+        "dynasty": "启蒙运动",
+        "start_year": 1650,
+        "end_year": 1800,
+        "description": "理性时代"
+      },
+      {
+        "span": "industrial",
+        "dynasty": "工业革命",
+        "start_year": 1760,
+        "end_year": 1840,
+        "description": "技术变革时期"
+      },
+      {
+        "span": "modern",
+        "dynasty": "现代",
+        "start_year": 1800,
+        "end_year": 1914,
+        "description": "民族主义与帝国主义时期"
+      }
+    ]
+  }
+]

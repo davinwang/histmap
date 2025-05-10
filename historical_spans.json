@@ -1,6 +1,16 @@
 [
   {
     "civilization": "东亚文明(中国)",
+    "geometry": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            "东亚地理边界"
+          ]
+        ]
+      ]
+    },
     "drilldown":"historical_spans_east_asia.json",
     "spans": [
       {
@@ -231,6 +241,7 @@
   },
   {
     "civilization": "欧洲文明",
+    "drilldown":"historical_spans_europe.json",
     "spans": [
       {
         "span": "minoan civilization",
