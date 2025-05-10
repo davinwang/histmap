@@ -85,10 +85,8 @@ h1 { /* Main heading */
     font-weight: bold; /* Bold text */
     color: white; /* White text */
     text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Text shadow */
-    pointer-events: none; /* Ignore mouse events */
     white-space: nowrap; /* Prevent wrapping */
-    overflow: visible; /* Hide overflow */
-    text-overflow: ellipsis; /* Show ellipsis if text too long */
+    text-overflow: visible; /* Show ellipsis if text too long */
 }
 
 .civilization-label {

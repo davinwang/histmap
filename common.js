@@ -12,7 +12,7 @@ export function percentToYear(percent) {
 
 export function yearToPercent(year) {
     const currentYear = new Date().getFullYear();
-    return Math.round((year - START_YEAR) / (currentYear - START_YEAR) * 100);
+    return (year - START_YEAR) / (currentYear - START_YEAR) * 100;
 }
 
 // Generate color from dynasty name hash

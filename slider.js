@@ -33,77 +33,52 @@ export function setupSlider() {
                     label.style.backgroundColor = getDynastyColor(dynasty.dynasty);
                     label.textContent = dynasty.dynasty;
 
-                    slider.appendChild(label);
-                });
-
-                // 添加滑块鼠标移入事件
-                slider.addEventListener('mouseover', (e) => {
-                    const rect = slider.getBoundingClientRect();
-                    const clickPercent = (e.clientX - rect.left) / rect.width * 100;
-
-                    // 查找点击位置对应的朝代
-                    const currentDynasty = civilization.spans.find(dynasty => {
-                        const start = yearToPercent(dynasty.start_year);
-                        const end = yearToPercent(dynasty.end_year);
-                        return clickPercent >= start && clickPercent <= end;
-                    });
-                    // popup dynasty description
-                    if (currentDynasty) {
+                    // Add mouseover event to each dynasty label
+                    label.addEventListener('mouseover', (e) => {
                         const tooltip = document.createElement('div');
                         tooltip.className = 'dynasty-tooltip';
                         tooltip.innerHTML = `
-                            <strong>${currentDynasty.dynasty}</strong><br>
-                            开始年份: ${formatYear(currentDynasty.start_year)}<br>
-                            结束年份: ${formatYear(currentDynasty.end_year)}<br>
-                            ${currentDynasty.description || '暂无描述'}<br>
+                            <strong>${dynasty.dynasty}</strong><br>
+                            开始年份: ${formatYear(dynasty.start_year)}<br>
+                            结束年份: ${formatYear(dynasty.end_year)}<br>
+                            ${dynasty.description || '暂无描述'}<br>
                         `;
                         tooltip.style.position = 'absolute';
                         tooltip.style.left = `${e.clientX + 10}px`;
                         tooltip.style.top = `${e.clientY + 10}px`;
                         document.body.appendChild(tooltip);
-                    }
-                });
-                
-                // 添加触摸事件（移动端）
-                slider.addEventListener('touchstart', (e) => {
-                    const touch = e.touches[0];
-                    const rect = slider.getBoundingClientRect();
-                    const clickPercent = (touch.clientX - rect.left) / rect.width * 100;
-
-                    // 查找点击位置对应的朝代
-                    const currentDynasty = civilization.spans.find(dynasty => {
-                        const start = yearToPercent(dynasty.start_year);
-                        const end = yearToPercent(dynasty.end_year);
-                        return clickPercent >= start && clickPercent <= end;
+                        
+                        // Remove tooltip when mouse leaves the label
+                        label.addEventListener('mouseleave', () => {
+                            tooltip.remove();
+                        });
                     });
-                    // popup dynasty description
-                    if (currentDynasty) {
+                    
+                    // Add touch events for mobile
+                    label.addEventListener('touchstart', (e) => {
+                        const touch = e.touches[0];
                         const tooltip = document.createElement('div');
                         tooltip.className = 'dynasty-tooltip';
                         tooltip.innerHTML = `
-                            <strong>${currentDynasty.dynasty}</strong><br>
-                            开始年份: ${formatYear(currentDynasty.start_year)}<br>
-                            结束年份: ${formatYear(currentDynasty.end_year)}<br>
-                            ${currentDynasty.description || '暂无描述'}<br>
+                            <strong>${dynasty.dynasty}</strong><br>
+                            开始年份: ${formatYear(dynasty.start_year)}<br>
+                            结束年份: ${formatYear(dynasty.end_year)}<br>
+                            ${dynasty.description || '暂无描述'}<br>
                         `;
                         tooltip.style.position = 'absolute';
                         tooltip.style.left = `${touch.clientX + 10}px`;
                         tooltip.style.top = `${touch.clientY + 10}px`;
                         document.body.appendChild(tooltip);
                         
-                        // 添加触摸结束事件
+                        // Add touch end event
                         const removeTooltip = () => {
                             tooltip.remove();
                             document.removeEventListener('touchend', removeTooltip);
                         };
                         document.addEventListener('touchend', removeTooltip);
-                    }
-                });
+                    });
 
-                // 添加滑块鼠标移出事件
-                slider.addEventListener('mouseleave', (e) => {
-                    const tooltips = document.querySelectorAll('.dynasty-tooltip');
-                    tooltips.forEach(tooltip => tooltip.remove());
+                    slider.appendChild(label);
                 });
 
                 // 添加滑块点击事件
