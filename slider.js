@@ -45,7 +45,7 @@ export function setupSlider() {
                         `;
                         tooltip.style.position = 'absolute';
                         tooltip.style.left = `${e.clientX + 10}px`;
-                        tooltip.style.top = `${e.clientY + 10}px`;
+                        tooltip.style.top = `${e.clientY - 90}px`;
                         document.body.appendChild(tooltip);
                         
                         // Remove tooltip when mouse leaves the label
@@ -67,7 +67,7 @@ export function setupSlider() {
                         `;
                         tooltip.style.position = 'absolute';
                         tooltip.style.left = `${touch.clientX + 10}px`;
-                        tooltip.style.top = `${touch.clientY + 10}px`;
+                        tooltip.style.top = `${touch.clientY - 90}px`;
                         document.body.appendChild(tooltip);
                         
                         // Add touch end event
