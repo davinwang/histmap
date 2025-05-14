@@ -1,7 +1,7 @@
 import { formatYear, percentToYear, yearToPercent, getDynastyColor } from './common.js';
 
 
-// 滑块功能模块
+// Function to set up the slider with data
 export function setupSliderWithData(historicalSpans) {
     // Process all available civilizations
     historicalSpans.forEach((civilization, index) => {
@@ -46,7 +46,7 @@ export function setupSliderWithData(historicalSpans) {
 }
 
 export function setupSlider() {
-    // 添加朝代标签
+    // Add slider drag functionality (same as original)
     fetch('historical_spans.json')
         .then(response => response.json())
         .then(historicalSpans => {
@@ -58,7 +58,7 @@ export function setupSlider() {
                 slider.id = `slider${index}`;
                 sliderContainer.insertBefore(slider, document.getElementById('yearFrom'));
                 
-                // 添加civilization名称标签
+                // Add civilization name label
                 const civLabel = document.createElement('div');
                 civLabel.className = 'civilization-label';
                 civLabel.textContent = civilization.civilization;
@@ -124,7 +124,7 @@ export function setupSlider() {
                     slider.appendChild(label);
                 });
 
-                // 添加滑块点击事件
+                // Add double-click events
                 slider.addEventListener('dblclick', (e) => {
                     if (civilization.drilldown) {
                         fetch(civilization.drilldown)
@@ -141,6 +141,7 @@ export function setupSlider() {
                     }
                 });
                 
+                // TODO: It's not working
                 slider.addEventListener('contextmenu', (e) => {
                     e.preventDefault();
                     if (civilization.drillup) {
@@ -162,7 +163,7 @@ export function setupSlider() {
                     const rect = slider.getBoundingClientRect();
                     const clickPercent = (e.clientX - rect.left) / rect.width * 100;
 
-                    // 查找点击位置对应的朝代
+                    // Find the clicked dynasty
                     const clickedDynasty = civilization.spans.find(dynasty => {
                         const start = yearToPercent(dynasty.start_year);
                         const end = yearToPercent(dynasty.end_year);
@@ -170,19 +171,19 @@ export function setupSlider() {
                     });
 
                     if (clickedDynasty) {
-                        // 更新滑块位置
+                        // Update slider thumbs
                         const startPercent = yearToPercent(clickedDynasty.start_year);
                         const endPercent = yearToPercent(clickedDynasty.end_year);
 
                         thumbFrom.style.left = `${startPercent}%`;
                         thumbTo.style.left = `${endPercent}%`;
 
-                        // 更新显示文本
+                        // Update year range display
                         // document.getElementById('yearFrom').textContent = formatYear(clickedDynasty.start_year);
                         // document.getElementById('yearTo').textContent = formatYear(clickedDynasty.end_year);
                         document.getElementById('yearRange').textContent = `(${formatYear(clickedDynasty.start_year)} - ${formatYear(clickedDynasty.end_year)})`;
 
-                        // 触发自定义事件
+                        // Dispatch custom event with year range
                         const event = new CustomEvent('yearRangeChanged', {
                             detail: {
                                 fromYear: clickedDynasty.start_year,
@@ -194,7 +195,7 @@ export function setupSlider() {
                 });
             });
 
-            // 添加滑块拖动功能
+            // Add slider drag functionality (same as original)
             const thumbFrom = document.getElementById('yearFrom');
             const thumbTo = document.getElementById('yearTo');
             let isDragging = false;
@@ -247,12 +248,6 @@ export function setupSlider() {
                 const toPercent = parseFloat(document.getElementById('yearTo').style.left);
                 const fromYear = percentToYear(fromPercent);
                 const toYear = percentToYear(toPercent);
-                console.log('滑块释放事件触发', {
-                    fromPercent,
-                    toPercent,
-                    fromYear,
-                    toYear
-                });
                 document.getElementById('yearRange').textContent = `(${formatYear(fromYear)} - ${formatYear(toYear)})`;
 
                 // Dispatch custom event with year range
@@ -269,5 +264,5 @@ export function setupSlider() {
 
 
         })
-        .catch(error => console.error('数据加载失败:', error));
+        .catch(error => console.error('Error:', error));
 }
