@@ -57,6 +57,26 @@ h1 { /* Main heading */
     margin-top: 0; /* No top margin */
     border-radius: 2px; /* Slightly rounded corners */
     overflow: hidden; /* Hide overflow */
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn {
+    margin-right: 10px;
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 4px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.back-btn {
+    order: -1;
+}
+
+eye-btn {
+    order: -1;
 }
 
 .thumb { /* Slider handle */
@@ -90,10 +110,10 @@ h1 { /* Main heading */
 }
 
 .civilization-label {
-    position: absolute;
+    position: flex;
     left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
     color: white;
     font-weight: bold;
     pointer-events: none;

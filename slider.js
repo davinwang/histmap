@@ -2,6 +2,53 @@ import { formatYear, percentToYear, yearToPercent, getDynastyColor } from './com
 
 
 // Function to set up the slider with data
+function addDynastyTooltipEvents(label, dynasty) {
+    // Mouseover event
+    label.addEventListener('mouseover', (e) => {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'dynasty-tooltip';
+        tooltip.innerHTML = `
+            <strong>${dynasty.dynasty}</strong><br>
+            开始年份: ${formatYear(dynasty.start_year)}<br>
+            结束年份: ${formatYear(dynasty.end_year)}<br>
+            ${dynasty.description || '暂无描述'}<br>
+        `;
+        tooltip.style.position = 'absolute';
+        tooltip.style.left = `${e.clientX + 10}px`;
+        tooltip.style.top = `${e.clientY - 90}px`;
+        document.body.appendChild(tooltip);
+        
+        // Remove tooltip when mouse leaves the label
+        label.addEventListener('mouseleave', () => {
+            tooltip.remove();
+        });
+    });
+    
+    // Touch events for mobile
+    label.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        const tooltip = document.createElement('div');
+        tooltip.className = 'dynasty-tooltip';
+        tooltip.innerHTML = `
+            <strong>${dynasty.dynasty}</strong><br>
+            开始年份: ${formatYear(dynasty.start_year)}<br>
+            结束年份: ${formatYear(dynasty.end_year)}<br>
+            ${dynasty.description || '暂无描述'}<br>
+        `;
+        tooltip.style.position = 'absolute';
+        tooltip.style.left = `${touch.clientX + 10}px`;
+        tooltip.style.top = `${touch.clientY - 90}px`;
+        document.body.appendChild(tooltip);
+        
+        // Add touch end event
+        const removeTooltip = () => {
+            tooltip.remove();
+            document.removeEventListener('touchend', removeTooltip);
+        };
+        document.addEventListener('touchend', removeTooltip);
+    });
+}
+
 export function setupSliderWithData(historicalSpans) {
     // Process all available civilizations
     historicalSpans.forEach((civilization, index) => {
@@ -11,11 +58,46 @@ export function setupSliderWithData(historicalSpans) {
         slider.id = `slider${index}`;
         sliderContainer.insertBefore(slider, document.getElementById('yearFrom'));
         
+        // Add navigation buttons if needed
+        if (civilization.drillup) {
+            const backBtn = document.createElement('button');
+            backBtn.className = 'nav-btn back-btn';
+            backBtn.innerHTML = '&lt;';
+            backBtn.addEventListener('click', () => {
+                fetch(civilization.drillup)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('sliders-container').innerHTML = 
+                            '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
+                            '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
+                        setupSliderWithData(data);
+                    });
+            });
+            slider.appendChild(backBtn);
+        }
+        
         // Add civilization name label
         const civLabel = document.createElement('div');
         civLabel.className = 'civilization-label';
         civLabel.textContent = civilization.civilization;
         slider.appendChild(civLabel);
+        
+        if (civilization.drilldown) {
+            const eyeBtn = document.createElement('button');
+            eyeBtn.className = 'nav-btn eye-btn';
+            eyeBtn.innerHTML = '👁';
+            eyeBtn.addEventListener('click', () => {
+                fetch(civilization.drilldown)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('sliders-container').innerHTML = 
+                            '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
+                            '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
+                        setupSliderWithData(data);
+                    });
+            });
+            slider.appendChild(eyeBtn);
+        }
 
         civilization.spans.forEach(dynasty => {
             const startPercent = yearToPercent(dynasty.start_year);
@@ -29,7 +111,8 @@ export function setupSliderWithData(historicalSpans) {
             label.style.backgroundColor = getDynastyColor(dynasty.dynasty);
             label.textContent = dynasty.dynasty;
 
-            // Add mouseover and touch events (same as original)
+            // Add mouseover and touch events
+            addDynastyTooltipEvents(label, dynasty);
             slider.appendChild(label);
         });
 
@@ -43,6 +126,43 @@ export function setupSliderWithData(historicalSpans) {
     let currentThumb = null;
 
     // Rest of drag functionality (same as original)
+}
+
+function addNavigationEvents(slider, civilization) {
+    // Double-click for drilldown
+    slider.addEventListener('dblclick', (e) => {
+        if (civilization.drilldown) {
+            fetch(civilization.drilldown)
+                .then(response => response.json())
+                .then(data => {
+                    // Clear existing sliders
+                    document.getElementById('sliders-container').innerHTML = 
+                        '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
+                        '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
+                    // Recreate sliders with new data
+                    setupSliderWithData(data);
+                })
+                .catch(error => console.error('Drilldown data loading failed:', error));
+        }
+    });
+    
+    // Right-click for drillup
+    slider.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        if (civilization.drillup) {
+            fetch(civilization.drillup)
+                .then(response => response.json())
+                .then(data => {
+                    // Clear existing sliders
+                    document.getElementById('sliders-container').innerHTML = 
+                        '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
+                        '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
+                    // Recreate sliders with new data
+                    setupSliderWithData(data);
+                })
+                .catch(error => console.error('Drillup data loading failed:', error));
+        }
+    });
 }
 
 export function setupSlider() {
@@ -63,6 +183,24 @@ export function setupSlider() {
                 civLabel.className = 'civilization-label';
                 civLabel.textContent = civilization.civilization;
                 slider.appendChild(civLabel);
+                
+                // Add eye button if drilldown available
+                if (civilization.drilldown) {
+                    const eyeBtn = document.createElement('button');
+                    eyeBtn.className = 'nav-btn eye-btn';
+                    eyeBtn.innerHTML = '👁';
+                    eyeBtn.addEventListener('click', () => {
+                        fetch(civilization.drilldown)
+                            .then(response => response.json())
+                            .then(data => {
+                                document.getElementById('sliders-container').innerHTML = 
+                                    '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
+                                    '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
+                                setupSliderWithData(data);
+                            });
+                    });
+                    slider.appendChild(eyeBtn);
+                }
 
                 civilization.spans.forEach(dynasty => {
                     const startPercent = yearToPercent(dynasty.start_year);
@@ -124,6 +262,9 @@ export function setupSlider() {
                     slider.appendChild(label);
                 });
 
+                // Add navigation events
+                addNavigationEvents(slider, civilization);
+                
                 // Add double-click events
                 slider.addEventListener('dblclick', (e) => {
                     if (civilization.drilldown) {
@@ -264,5 +405,5 @@ export function setupSlider() {
 
 
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => console.error('数据加载失败:', error));
 }
