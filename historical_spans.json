@@ -11,7 +11,7 @@
         ]
       ]
     },
-    "drilldown":"historical_spans_east_asia.json",
+    "drilldown": "historical_spans_east_asia.json",
     "spans": [
       {
         "span": "xia",
@@ -73,7 +73,8 @@
         "span": "sui",
         "dynasty": "隋",
         "start_year": 581,
-        "end_year": 618
+        "end_year": 618,
+        "description": "短暂但重要的统一王朝"
       },
       {
         "span": "tang",
@@ -207,41 +208,76 @@
     ]
   },
   {
-    "civilization": "北非文明(古埃及)",
+    "civilization": "非洲文明(古埃及)",
     "spans": [
       {
         "span": "early dynastic period",
-        "dynasty": "早王朝时期",
+        "dynasty": "古埃及早王朝时期",
         "start_year": -3100,
         "end_year": -2686,
         "description": "埃及统一的开始，包括第1-2王朝"
       },
       {
         "span": "old kingdom",
-        "dynasty": "古王国时期",
+        "dynasty": "古埃及古王国时期",
         "start_year": -2686,
         "end_year": -2181,
         "description": "金字塔建造的黄金时代，包括第3-6王朝"
       },
       {
         "span": "middle kingdom",
-        "dynasty": "中王国时期",
+        "dynasty": "古埃及中王国时期",
         "start_year": -2055,
         "end_year": -1650,
         "description": "埃及复兴时期，包括第11-12王朝"
       },
       {
         "span": "new kingdom",
-        "dynasty": "新王国时期",
+        "dynasty": "古埃及新王国时期",
         "start_year": -1550,
         "end_year": -1069,
         "description": "埃及帝国时期，包括第18-20王朝"
+      },
+      {
+        "span": "roman_africa",
+        "dynasty": "罗马帝国",
+        "start_year": -146,
+        "end_year": 476,
+        "description": "罗马共和国至西罗马帝国时期控制北非地中海沿岸，设立阿非利加省。"
+      },
+      {
+        "span": "byzantine_africa",
+        "dynasty": "拜占庭帝国",
+        "start_year": 533,
+        "end_year": 698,
+        "description": "东罗马帝国（拜占庭）重新征服北非，控制迦太基等地，后被阿拉伯人攻占。"
+      },
+      {
+        "span": "fatimid_caliphate",
+        "dynasty": "法蒂玛王朝",
+        "start_year": 909,
+        "end_year": 1171,
+        "description": "什叶派伊斯兰教政权，控制北非及埃及，首都先后为突尼斯和开罗。"
+      },
+      {
+        "span": "mali_empire",
+        "dynasty": "马里帝国",
+        "start_year": 1235,
+        "end_year": 1600,
+        "description": "西非黄金贸易中心，以廷巴克图为文化枢纽，松迪亚塔·凯塔为奠基人。"
+      },
+      {
+        "span": "songhai_empire",
+        "dynasty": "桑海帝国",
+        "start_year": 1464,
+        "end_year": 1591,
+        "description": "继承马里帝国贸易网络，通过军事扩张控制西非，首都为加奥。"
       }
     ]
   },
   {
     "civilization": "欧洲文明",
-    "drilldown":"historical_spans_europe.json",
+    "drilldown": "historical_spans_europe.json",
     "spans": [
       {
         "span": "minoan civilization",
@@ -310,7 +346,17 @@
   },
   {
     "civilization": "美洲文明",
+    "drilldown": "historical_spans_americas.json",
     "spans": [
+      {
+        "span": "caral civilization",
+        "dynasty": "卡拉尔文明",
+        "start_year": -3000,
+        "end_year": -1800,
+        "description": "美洲最古老的文明，位于秘鲁太平洋沿岸，被誉为小北文明",
+        "tech_stage": "新石器时代",
+        "capital": null
+      },
       {
         "span": "olmec civilization",
         "dynasty": "奥尔梅克文明",
@@ -326,18 +372,21 @@
         "description": "玛雅文明鼎盛时期"
       },
       {
+        "span": "aztec empire",
         "dynasty": "阿兹特克帝国",
         "start_year": 1428,
         "end_year": 1521,
         "description": "墨西哥谷地最后的本土帝国"
       },
       {
+        "span": "inca empire",
         "dynasty": "印加帝国",
         "start_year": 1438,
         "end_year": 1533,
         "description": "安第斯地区最大帝国"
       },
       {
+        "span": "mississippian culture",
         "dynasty": "密西西比文化",
         "start_year": 800,
         "end_year": 1600,

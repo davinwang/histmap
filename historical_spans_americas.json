@@ -1,0 +1,119 @@
+[
+    {
+        "civilization": "北美洲文明",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "mississippian culture",
+                "dynasty": "密西西比文化",
+                "start_year": 800,
+                "end_year": 1600,
+                "description": "北美东部土墩建造者文化，以大型土丘和复杂社会结构为特点",
+                "tech_stage": "新石器时代",
+                "capital": "未知"
+            },
+            {
+                "span": "post-columbian period",
+                "dynasty": "后哥伦布时期",
+                "start_year": 1492,
+                "end_year": 1900,
+                "description": "欧洲殖民者到来后的美洲历史，包括原住民文化的衰落和欧洲文化的引入",
+                "tech_stage": "电气时代",
+                "capital": "未知"
+            }
+        ]
+    },
+    {
+        "civilization": "中美洲文明",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "caral civilization",
+                "dynasty": "卡拉尔文明",
+                "start_year": -3000,
+                "end_year": -1800,
+                "description": "美洲最古老的文明，位于秘鲁太平洋沿岸，被誉为小北文明",
+                "tech_stage": "旧石器时代",
+                "capital": "未知"
+            },
+            {
+                "span": "olmec civilization",
+                "dynasty": "奥尔梅克文明",
+                "start_year": -1200,
+                "end_year": -400,
+                "description": "中美洲最早的复杂社会之一，以巨大的石雕、宗教仪式和早期城市化为特点",
+                "tech_stage": "新石器时代",
+                "capital": "未知"
+            },
+            {
+                "span": "moche civilization",
+                "dynasty": "莫切文化",
+                "start_year": 100,
+                "end_year": 750,
+                "description": "秘鲁西北部的古代文明，以陶器和金属工艺著称",
+                "tech_stage": "青铜时代",
+                "capital": "未知"
+            },
+            {
+                "span": "classic maya",
+                "dynasty": "玛雅古典期",
+                "start_year": 250,
+                "end_year": 900,
+                "description": "玛雅文明的鼎盛时期，城市和文字系统高度发展",
+                "tech_stage": "青铜时代",
+                "capital": "未知"
+            },
+            {
+                "span": "teotihuacan",
+                "dynasty": "特奥蒂瓦坎",
+                "start_year": 100,
+                "end_year": 750,
+                "description": "位于现代墨西哥的古代城市，曾是美洲最大的城市之一",
+                "tech_stage": "青铜时代",
+                "capital": "特奥蒂瓦坎"
+            },
+            {
+                "span": "aztec empire",
+                "dynasty": "阿兹特克帝国",
+                "start_year": 1428,
+                "end_year": 1521,
+                "description": "墨西哥谷地最后的本土帝国，以军事和宗教制度著称",
+                "tech_stage": "铁器时代",
+                "capital": "特诺奇蒂特兰"
+            }
+        ]
+    },
+    {
+        "civilization": "南美洲文明",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "paracas culture",
+                "dynasty": "帕拉卡斯文化",
+                "start_year": -900,
+                "end_year": 400,
+                "description": "秘鲁南部伊卡大区的古代文化，与查文文化关系密切",
+                "tech_stage": "新石器时代",
+                "capital": "未知"
+            },
+            {
+                "span": "inca empire",
+                "dynasty": "印加帝国",
+                "start_year": 1438,
+                "end_year": 1533,
+                "description": "安第斯地区最大帝国，以严密的行政体系和道路系统闻名",
+                "tech_stage": "铁器时代",
+                "capital": "库斯科"
+            },
+            {
+                "span": "peruvian culture",
+                "dynasty": "秘鲁文化",
+                "start_year": 1500,
+                "end_year": 1800,
+                "description": "秘鲁的传统文化，以其独特的地理和历史背景而闻名",
+                "tech_stage": "蒸汽时代",
+                "capital": "利马"
+            }
+        ]
+    }
+]

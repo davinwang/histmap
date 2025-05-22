@@ -1,7 +1,221 @@
 [
   {
-    "civilization": "古希腊",
-    "drillup":"historical_spans.json",
+    "civilization": "西欧地区文明",
+    "drillup": "historical_spans.json",
+    "spans": [
+      {
+        "span": "archaic",
+        "dynasty": "古风时期",
+        "start_year": -800,
+        "end_year": -480,
+        "description": "城邦形成时期"
+      },
+      {
+        "span": "classical",
+        "dynasty": "古典希腊",
+        "start_year": -480,
+        "end_year": -323,
+        "description": "希腊文化黄金时代"
+      },
+      {
+        "span": "hellenistic",
+        "dynasty": "希腊化时期",
+        "start_year": -323,
+        "end_year": -146,
+        "description": "希腊文化传播时期"
+      },
+      {
+        "span": "kingdom",
+        "dynasty": "罗马王政时期",
+        "start_year": -753,
+        "end_year": -509,
+        "description": "传说中的建国时期"
+      },
+      {
+        "span": "republic",
+        "dynasty": "罗马共和国",
+        "start_year": -509,
+        "end_year": -27,
+        "description": "共和政府时期"
+      },
+      {
+        "span": "empire",
+        "dynasty": "罗马帝国",
+        "start_year": -27,
+        "end_year": 476,
+        "description": "帝国时期"
+      },
+      {
+        "span": "early",
+        "dynasty": "中世纪早期",
+        "start_year": 476,
+        "end_year": 1000,
+        "description": "民族大迁徙与封建制度形成"
+      },
+      {
+        "span": "high",
+        "dynasty": "中世纪盛期",
+        "start_year": 1000,
+        "end_year": 1300,
+        "description": "文化与经济发展时期"
+      },
+      {
+        "span": "late",
+        "dynasty": "中世纪晚期",
+        "start_year": 1300,
+        "end_year": 1453,
+        "description": "危机与转型时期"
+      },
+      {
+        "span": "renaissance",
+        "dynasty": "文艺复兴",
+        "start_year": 1300,
+        "end_year": 1500,
+        "description": "文化复兴"
+      },
+      {
+        "span": "reformation",
+        "dynasty": "宗教改革",
+        "start_year": 1517,
+        "end_year": 1648,
+        "description": "宗教改革运动"
+      },
+      {
+        "span": "enlightenment",
+        "dynasty": "启蒙运动",
+        "start_year": 1650,
+        "end_year": 1800,
+        "description": "理性时代"
+      },
+      {
+        "span": "industrial",
+        "dynasty": "工业革命",
+        "start_year": 1760,
+        "end_year": 1840,
+        "description": "技术变革时期"
+      },
+      {
+        "span": "modern",
+        "dynasty": "现代",
+        "start_year": 1800,
+        "end_year": 1914,
+        "description": "民族主义与帝国主义时期"
+      }
+    ]
+  },
+  {
+    "civilization": "中欧地区文明",
+    "drillup": "historical_spans.json",
+    "spans": [
+      {
+        "span": "early",
+        "dynasty": "中世纪早期",
+        "start_year": 476,
+        "end_year": 1000,
+        "description": "民族大迁徙与封建制度形成"
+      },
+      {
+        "span": "high",
+        "dynasty": "中世纪盛期",
+        "start_year": 1000,
+        "end_year": 1300,
+        "description": "文化与经济发展时期"
+      },
+      {
+        "span": "late",
+        "dynasty": "中世纪晚期",
+        "start_year": 1300,
+        "end_year": 1453,
+        "description": "危机与转型时期"
+      },
+      {
+        "span": "renaissance",
+        "dynasty": "文艺复兴",
+        "start_year": 1300,
+        "end_year": 1500,
+        "description": "文化复兴"
+      },
+      {
+        "span": "reformation",
+        "dynasty": "宗教改革",
+        "start_year": 1517,
+        "end_year": 1648,
+        "description": "宗教改革运动"
+      },
+      {
+        "span": "enlightenment",
+        "dynasty": "启蒙运动",
+        "start_year": 1650,
+        "end_year": 1800,
+        "description": "理性时代"
+      },
+      {
+        "span": "industrial",
+        "dynasty": "工业革命",
+        "start_year": 1760,
+        "end_year": 1840,
+        "description": "技术变革时期"
+      },
+      {
+        "span": "modern",
+        "dynasty": "现代",
+        "start_year": 1800,
+        "end_year": 1914,
+        "description": "民族主义与帝国主义时期"
+      }
+    ]
+  },
+  {
+    "civilization": "东欧地区文明",
+    "drillup": "historical_spans.json",
+    "spans": [
+      {
+        "span": "kyiv_rus",
+        "dynasty": "基辅罗斯",
+        "start_year": 862,
+        "end_year": 1242,
+        "description": "由诺斯族瓦良格人留里克建立的留里克王朝统治，是现代俄罗斯、乌克兰和白俄罗斯的前身。东正教于988年传入基辅罗斯，成为其文化的重要基础[[2]]。"
+      },
+      {
+        "span": "tatar",
+        "dynasty": "金帐汗国",
+        "start_year": 1242,
+        "end_year": 1480,
+        "description": "蒙古帝国的分支——金帐汗国由鞑靼人统治东欧长达两个半世纪，对东斯拉夫地区的政治、经济和文化产生了深远影响。"
+      },
+      {
+        "span": "moscow_principality",
+        "dynasty": "莫斯科大公国",
+        "start_year": 1480,
+        "end_year": 1547,
+        "description": "随着金帐汗国的衰落，莫斯科大公国逐渐崛起，伊凡三世成功摆脱蒙古统治并扩大势力范围，奠定了统一俄罗斯国家的基础。"
+      },
+      {
+        "span": "tsardom_of_russia",
+        "dynasty": "沙皇俄国",
+        "start_year": 1547,
+        "end_year": 1721,
+        "description": "伊凡四世（即伊凡雷帝）加冕为第一位沙皇，标志着莫斯科大公国正式升级为沙皇俄国。在此期间，俄罗斯领土大幅扩张，中央集权体制逐步确立。"
+      },
+      {
+        "span": "russian_empire",
+        "dynasty": "俄罗斯帝国",
+        "start_year": 1721,
+        "end_year": 1917,
+        "description": "彼得大帝在1721年宣布成立俄罗斯帝国，推动现代化改革，使俄罗斯跻身欧洲列强之列。此后近两个世纪，俄罗斯帝国持续扩展其影响力直至第一次世界大战结束。"
+      },
+      {
+        "span": "ussr",
+        "dynasty": "苏联",
+        "start_year": 1922,
+        "end_year": 1991,
+        "description": "共产主义政权时期，受俄罗斯帝国传统及社会主义意识形态影响。苏联成为世界超级大国之一，直到1991年解体。"
+      }
+    ]
+  },
+  {
+    "civilization": "南欧地区文明",
+    "drillup": "historical_spans.json",
     "spans": [
       {
         "span": "minoan",
@@ -37,13 +251,7 @@
         "start_year": -323,
         "end_year": -146,
         "description": "希腊文化传播时期"
-      }
-    ]
-  },
-  {
-    "civilization": "古罗马",
-    "drillup":"historical_spans.json",
-    "spans": [
+      },
       {
         "span": "kingdom",
         "dynasty": "罗马王政时期",
@@ -64,12 +272,102 @@
         "start_year": -27,
         "end_year": 476,
         "description": "帝国时期"
+      },
+      {
+        "span": "byzantine",
+        "dynasty": "拜占庭帝国",
+        "start_year": 395,
+        "end_year": 1453,
+        "description": "东罗马帝国的延续"
+      },
+      {
+        "span": "renaissance",
+        "dynasty": "文艺复兴",
+        "start_year": 1300,
+        "end_year": 1500,
+        "description": "文化复兴"
+      },
+      {
+        "span": "reformation",
+        "dynasty": "宗教改革",
+        "start_year": 1517,
+        "end_year": 1648,
+        "description": "宗教改革运动"
+      },
+      {
+        "span": "enlightenment",
+        "dynasty": "启蒙运动",
+        "start_year": 1650,
+        "end_year": 1800,
+        "description": "理性时代"
+      },
+      {
+        "span": "industrial",
+        "dynasty": "工业革命",
+        "start_year": 1760,
+        "end_year": 1840,
+        "description": "技术变革时期"
+      },
+      {
+        "span": "modern",
+        "dynasty": "现代",
+        "start_year": 1800,
+        "end_year": 1914,
+        "description": "民族主义与帝国主义时期"
       }
     ]
   },
   {
-    "civilization": "中世纪欧洲",
-    "drillup":"historical_spans.json",
+    "civilization": "伊比利亚半岛文明",
+    "drillup": "historical_spans.json",
+    "spans": [
+      {
+        "span": "phoenician_carthaginian",
+        "dynasty": "腓尼基与迦太基时期",
+        "start_year": -1100,
+        "end_year": -219,
+        "description": "腓尼基人和迦太基人在伊比利亚半岛建立贸易站和殖民地，成为布匿战争的战略要地。"
+      },
+      {
+        "span": "roman_empire",
+        "dynasty": "罗马帝国统治",
+        "start_year": -219,
+        "end_year": 476,
+        "description": "罗马人征服伊比利亚半岛，建立城市和基础设施，推广拉丁文化和基督教。"
+      },
+      {
+        "span": "visigothic_rule",
+        "dynasty": "西哥特王国统治",
+        "start_year": 476,
+        "end_year": 711,
+        "description": "西罗马帝国灭亡后，西哥特人建立统治，基督教成为主要宗教。"
+      },
+      {
+        "span": "iberian_islam",
+        "dynasty": "伊比利亚半岛伊斯兰统治与基督教收复",
+        "start_year": 711,
+        "end_year": 1492,
+        "description": "阿拉伯人征服伊比利亚半岛，建立科尔多瓦哈里发国；基督教王国展开收复失地运动，最终完成再征服。"
+      },
+      {
+        "span": "age_of_discovery",
+        "dynasty": "航海大发现与殖民扩张",
+        "start_year": 1492,
+        "end_year": 1800,
+        "description": "西班牙和葡萄牙开启大航海时代，探索新大陆并建立全球殖民帝国。"
+      },
+      {
+        "span": "modern_period",
+        "dynasty": "近现代历史",
+        "start_year": 1800,
+        "end_year": 2025,
+        "description": "经历独立战争、工业革命、内战及民主转型，西班牙与葡萄牙成为欧盟成员，走向现代化。"
+      }
+    ]
+  },
+  {
+    "civilization": "北欧文明",
+    "drillup": "historical_spans.json",
     "spans": [
       {
         "span": "early",
