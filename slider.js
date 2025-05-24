@@ -17,13 +17,13 @@ function addDynastyTooltipEvents(label, dynasty) {
         tooltip.style.left = `${e.clientX + 10}px`;
         tooltip.style.top = `${e.clientY - 90}px`;
         document.body.appendChild(tooltip);
-        
+
         // Remove tooltip when mouse leaves the label
         label.addEventListener('mouseleave', () => {
             tooltip.remove();
         });
     });
-    
+
     // Touch events for mobile
     label.addEventListener('touchstart', (e) => {
         const touch = e.touches[0];
@@ -39,7 +39,7 @@ function addDynastyTooltipEvents(label, dynasty) {
         tooltip.style.left = `${touch.clientX + 10}px`;
         tooltip.style.top = `${touch.clientY - 90}px`;
         document.body.appendChild(tooltip);
-        
+
         // Add touch end event
         const removeTooltip = () => {
             tooltip.remove();
@@ -57,7 +57,7 @@ export function setupSliderWithData(historicalSpans) {
         slider.className = 'slider';
         slider.id = `slider${index}`;
         sliderContainer.insertBefore(slider, document.getElementById('yearFrom'));
-        
+
         // Add navigation buttons if needed
         if (civilization.drillup) {
             const backBtn = document.createElement('button');
@@ -66,22 +66,17 @@ export function setupSliderWithData(historicalSpans) {
             backBtn.addEventListener('click', () => {
                 fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
                     .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('sliders-container').innerHTML = 
-                            '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
-                            '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
-                        setupSliderWithData(data);
-                    });
+                    .then(data => refreshSliderContainer(data));
             });
             slider.appendChild(backBtn);
         }
-        
+
         // Add civilization name label
         const civLabel = document.createElement('div');
         civLabel.className = 'civilization-label';
         civLabel.textContent = civilization.civilization;
         slider.appendChild(civLabel);
-        
+
         if (civilization.drilldown) {
             const eyeBtn = document.createElement('button');
             eyeBtn.className = 'nav-btn eye-btn';
@@ -89,12 +84,7 @@ export function setupSliderWithData(historicalSpans) {
             eyeBtn.addEventListener('click', () => {
                 fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
                     .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('sliders-container').innerHTML = 
-                            '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
-                            '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
-                        setupSliderWithData(data);
-                    });
+                    .then(data => refreshSliderContainer(data));
             });
             slider.appendChild(eyeBtn);
         }
@@ -118,7 +108,7 @@ export function setupSliderWithData(historicalSpans) {
 
         // Add click and double-click events (same as original)
     });
-    
+
     // Add slider drag functionality (same as original)
     const thumbFrom = document.getElementById('yearFrom');
     const thumbTo = document.getElementById('yearTo');
@@ -136,7 +126,7 @@ function addNavigationEvents(slider, civilization) {
                 .then(response => response.json())
                 .then(data => {
                     // Clear existing sliders
-                    document.getElementById('sliders-container').innerHTML = 
+                    document.getElementById('sliders-container').innerHTML =
                         '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
                         '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
                     // Recreate sliders with new data
@@ -145,24 +135,16 @@ function addNavigationEvents(slider, civilization) {
                 .catch(error => console.error('Drilldown data loading failed:', error));
         }
     });
-    
+
     // Right-click for drillup
     slider.addEventListener('contextmenu', (e) => {
         e.preventDefault();
         if (civilization.drillup) {
             fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
                 .then(response => response.json())
-                .then(data => {
-                    // Clear existing sliders
-                    document.getElementById('sliders-container').innerHTML = 
-                        '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
-                        '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
-                    // Recreate sliders with new data
-                    setupSliderWithData(data);
-                })
-                .catch(error => console.error('Drillup data loading failed:', error));
+                .then(data => refreshSliderContainer(data)).catch(error => console.error('Drillup data loading failed:', error));
         }
-    });
+    })
 }
 
 export function setupSlider() {
@@ -177,13 +159,13 @@ export function setupSlider() {
                 slider.className = 'slider';
                 slider.id = `slider${index}`;
                 sliderContainer.insertBefore(slider, document.getElementById('yearFrom'));
-                
+
                 // Add civilization name label
                 const civLabel = document.createElement('div');
                 civLabel.className = 'civilization-label';
                 civLabel.textContent = civilization.civilization;
                 slider.appendChild(civLabel);
-                
+
                 // Add eye button if drilldown available
                 if (civilization.drilldown) {
                     const eyeBtn = document.createElement('button');
@@ -192,12 +174,7 @@ export function setupSlider() {
                     eyeBtn.addEventListener('click', () => {
                         fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
                             .then(response => response.json())
-                            .then(data => {
-                                document.getElementById('sliders-container').innerHTML = 
-                                    '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
-                                    '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
-                                setupSliderWithData(data);
-                            });
+                            .then(data => refreshSliderContainer(data));
                     });
                     slider.appendChild(eyeBtn);
                 }
@@ -228,13 +205,13 @@ export function setupSlider() {
                         tooltip.style.left = `${e.clientX + 10}px`;
                         tooltip.style.top = `${e.clientY - 90}px`;
                         document.body.appendChild(tooltip);
-                        
+
                         // Remove tooltip when mouse leaves the label
                         label.addEventListener('mouseleave', () => {
                             tooltip.remove();
                         });
                     });
-                    
+
                     // Add touch events for mobile
                     label.addEventListener('touchstart', (e) => {
                         const touch = e.touches[0];
@@ -250,7 +227,7 @@ export function setupSlider() {
                         tooltip.style.left = `${touch.clientX + 10}px`;
                         tooltip.style.top = `${touch.clientY - 90}px`;
                         document.body.appendChild(tooltip);
-                        
+
                         // Add touch end event
                         const removeTooltip = () => {
                             tooltip.remove();
@@ -264,7 +241,7 @@ export function setupSlider() {
 
                 // Add navigation events
                 addNavigationEvents(slider, civilization);
-                
+
                 // Add double-click events
                 slider.addEventListener('dblclick', (e) => {
                     if (civilization.drilldown) {
@@ -272,7 +249,7 @@ export function setupSlider() {
                             .then(response => response.json())
                             .then(data => {
                                 // Clear existing sliders
-                                document.getElementById('sliders-container').innerHTML = 
+                                document.getElementById('sliders-container').innerHTML =
                                     '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
                                     '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
                                 // Recreate sliders with new data
@@ -281,25 +258,7 @@ export function setupSlider() {
                             .catch(error => console.error('Drilldown data loading failed:', error));
                     }
                 });
-                
-                // TODO: It's not working
-                slider.addEventListener('contextmenu', (e) => {
-                    e.preventDefault();
-                    if (civilization.drillup) {
-                        fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
-                            .then(response => response.json())
-                            .then(data => {
-                                // Clear existing sliders
-                                document.getElementById('sliders-container').innerHTML = 
-                                    '<div class="thumb" id="yearFrom" style="left: 0%;"></div>' +
-                                    '<div class="thumb" id="yearTo" style="left: 100%;"></div>';
-                                // Recreate sliders with new data
-                                setupSliderWithData(data);
-                            })
-                            .catch(error => console.error('Drillup data loading failed:', error));
-                    }
-                });
-                
+
                 slider.addEventListener('click', (e) => {
                     const rect = slider.getBoundingClientRect();
                     const clickPercent = (e.clientX - rect.left) / rect.width * 100;
@@ -406,4 +365,12 @@ export function setupSlider() {
 
         })
         .catch(error => console.error('数据加载失败:', error));
+}
+
+function refreshSliderContainer(data) {
+    const container = document.getElementById('sliders-container');
+    container.innerHTML =
+        '<div class="thumb" id="yearFrom"></div>' +
+        '<div class="thumb" id="yearTo"></div>';
+    setupSliderWithData(data);
 }
