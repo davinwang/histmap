@@ -148,6 +148,13 @@ function addNavigationEvents(slider, civilization) {
 }
 
 export function setupSlider() {
+    // Add event listener for language changes
+    document.addEventListener('languageChanged', () => {
+        fetch(`historical_spans.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_spans.json'))
+            .then(response => response.json())
+            .then(data => refreshSliderContainer(data));
+    });
+
     // Add slider drag functionality (same as original)
     fetch(`historical_spans.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_spans.json'))
         .then(response => response.json())
