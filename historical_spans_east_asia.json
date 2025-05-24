@@ -8,7 +8,7 @@
         "dynasty": "夏",
         "start_year": -2070,
         "end_year": -1600,
-        "description": "中国历史上第一个王朝"
+        "description": "传统文献记载的中国首个王朝"
       },
       {
         "span": "shang",
@@ -71,6 +71,13 @@
         "start_year": 618,
         "end_year": 907,
         "description": "中国历史上最强盛的朝代之一"
+      },
+      {
+        "span": "wudaishiguo",
+        "dynasty": "五代十国",
+        "start_year": 907,
+        "end_year": 960,
+        "description": "中原地区先后出现五个短命王朝，同时存在十余个地方割据政权"
       },
       {
         "span": "song",

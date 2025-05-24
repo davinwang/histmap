@@ -35,6 +35,13 @@
         "description": "分为西周和东周"
       },
       {
+        "span": "zhanguo",
+        "dynasty": "战国",
+        "start_year": -475,
+        "end_year": -221,
+        "description": "七雄争霸时期，商鞅变法推动社会变革"
+      },
+      {
         "span": "qin",
         "dynasty": "秦",
         "start_year": -221,
@@ -82,6 +89,13 @@
         "start_year": 618,
         "end_year": 907,
         "description": "中国历史上最强盛的朝代之一"
+      },
+      {
+        "span": "wudaishiguo",
+        "dynasty": "五代十国",
+        "start_year": 907,
+        "end_year": 979,
+        "description": "中原五个王朝与十个割据政权并存，至北宋灭北汉结束"
       },
       {
         "span": "song",
@@ -156,14 +170,14 @@
         "dynasty": "德里苏丹国",
         "start_year": 1206,
         "end_year": 1526,
-        "description": "北印度伊斯兰政权"
+        "description": "北印度伊斯兰政权，1526年被莫卧儿帝国取代"
       },
       {
         "span": "mughal empire",
         "dynasty": "莫卧儿帝国",
         "start_year": 1526,
         "end_year": 1857,
-        "description": "印度最后一个大帝国"
+        "description": "巴布尔建立的伊斯兰帝国，1857年英国废除末代皇帝"
       }
     ]
   },
@@ -197,6 +211,13 @@
         "start_year": -1894,
         "end_year": -1595,
         "description": "汉谟拉比法典制定时期"
+      },
+      {
+        "span": "achaemenid empire",
+        "dynasty": "阿契美尼德王朝",
+        "start_year": -550,
+        "end_year": -330,
+        "description": "波斯第一帝国，居鲁士大帝建立，统治两河流域"
       },
       {
         "span": "neo-babylonian empire",
@@ -237,6 +258,13 @@
         "start_year": -1550,
         "end_year": -1069,
         "description": "埃及帝国时期，包括第18-20王朝"
+      },
+      {
+        "span": "ptolemaic kingdom",
+        "dynasty": "托勒密王朝",
+        "start_year": -305,
+        "end_year": -30,
+        "description": "希腊化时期埃及王朝，克利奥帕特拉七世为末代法老"
       },
       {
         "span": "roman_africa",
@@ -332,15 +360,15 @@
         "span": "middle ages",
         "dynasty": "中世纪",
         "start_year": 476,
-        "end_year": 1453,
-        "description": "欧洲封建制度形成和发展时期"
+        "end_year": 1500,
+        "description": "欧洲封建制度时期，以君士坦丁堡陷落和地理大发现为终结"
       },
       {
         "span": "renaissance",
         "dynasty": "文艺复兴",
         "start_year": 1300,
         "end_year": 1600,
-        "description": "欧洲文化艺术复兴时期"
+        "description": "欧洲文化复兴运动，但丁至莎士比亚时期"
       }
     ]
   },
@@ -389,8 +417,8 @@
         "span": "mississippian culture",
         "dynasty": "密西西比文化",
         "start_year": 800,
-        "end_year": 1600,
-        "description": "北美东部土墩建造者文化"
+        "end_year": 1540,
+        "description": "北美最大原住民文化，16世纪因欧洲殖民而衰亡"
       }
     ]
   }
