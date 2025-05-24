@@ -7,7 +7,9 @@ Promise.all([
   new Promise((resolve) => navigator.geolocation.getCurrentPosition(resolve,
     () => resolve({ coords: { latitude: 30.0586, longitude: 114.3480 } }))
   ),
-  fetch('historical_events.json').then(r => r.json())
+  fetch(`historical_events.${document.getElementById('language').value || 'zh'}.json`)
+    .then(r => r.json())
+    .catch(() => fetch('historical_events.json').then(r => r.json()))
 ]).then(([position, events]) => {
   const map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 5);
 

@@ -4,7 +4,7 @@ import { formatYear, getDynastyColor } from './common.js';
 export function loadHistoricalEvents(map, lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
 
     // Load historical events data
-    fetch('historical_events.json')
+    fetch(`historical_events.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_events.json'))
         .then(response => response.json())
         .then(events => {
             function formatDate(hist_event) {

@@ -64,7 +64,7 @@ export function setupSliderWithData(historicalSpans) {
             backBtn.className = 'nav-btn back-btn';
             backBtn.innerHTML = '&lt;';
             backBtn.addEventListener('click', () => {
-                fetch(civilization.drillup)
+                fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
                     .then(response => response.json())
                     .then(data => {
                         document.getElementById('sliders-container').innerHTML = 
@@ -87,7 +87,7 @@ export function setupSliderWithData(historicalSpans) {
             eyeBtn.className = 'nav-btn eye-btn';
             eyeBtn.innerHTML = '👁';
             eyeBtn.addEventListener('click', () => {
-                fetch(civilization.drilldown)
+                fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
                     .then(response => response.json())
                     .then(data => {
                         document.getElementById('sliders-container').innerHTML = 
@@ -132,7 +132,7 @@ function addNavigationEvents(slider, civilization) {
     // Double-click for drilldown
     slider.addEventListener('dblclick', (e) => {
         if (civilization.drilldown) {
-            fetch(civilization.drilldown)
+            fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
                 .then(response => response.json())
                 .then(data => {
                     // Clear existing sliders
@@ -150,7 +150,7 @@ function addNavigationEvents(slider, civilization) {
     slider.addEventListener('contextmenu', (e) => {
         e.preventDefault();
         if (civilization.drillup) {
-            fetch(civilization.drillup)
+            fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
                 .then(response => response.json())
                 .then(data => {
                     // Clear existing sliders
@@ -167,7 +167,7 @@ function addNavigationEvents(slider, civilization) {
 
 export function setupSlider() {
     // Add slider drag functionality (same as original)
-    fetch('historical_spans.json')
+    fetch(`historical_spans.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_spans.json'))
         .then(response => response.json())
         .then(historicalSpans => {
             // Process all available civilizations
@@ -190,7 +190,7 @@ export function setupSlider() {
                     eyeBtn.className = 'nav-btn eye-btn';
                     eyeBtn.innerHTML = '👁';
                     eyeBtn.addEventListener('click', () => {
-                        fetch(civilization.drilldown)
+                        fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
                             .then(response => response.json())
                             .then(data => {
                                 document.getElementById('sliders-container').innerHTML = 
@@ -268,7 +268,7 @@ export function setupSlider() {
                 // Add double-click events
                 slider.addEventListener('dblclick', (e) => {
                     if (civilization.drilldown) {
-                        fetch(civilization.drilldown)
+                        fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
                             .then(response => response.json())
                             .then(data => {
                                 // Clear existing sliders
@@ -286,7 +286,7 @@ export function setupSlider() {
                 slider.addEventListener('contextmenu', (e) => {
                     e.preventDefault();
                     if (civilization.drillup) {
-                        fetch(civilization.drillup)
+                        fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
                             .then(response => response.json())
                             .then(data => {
                                 // Clear existing sliders
