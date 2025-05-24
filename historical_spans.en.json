@@ -1,0 +1,203 @@
+[
+  {
+    "civilization": "East Asian Civilization (China)",
+    "geometry": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            "East Asian geographical boundaries"
+          ]
+        ]
+      ]
+    },
+    "drilldown": "historical_spans_east_asia.json",
+    "spans": [
+      {
+        "span": "xia",
+        "dynasty": "Xia",
+        "start_year": -2070,
+        "end_year": -1600,
+        "description": "The first dynasty in Chinese history"
+      },
+      {
+        "span": "shang",
+        "dynasty": "Shang",
+        "start_year": -1600,
+        "end_year": -1046,
+        "description": "Highly developed bronze culture"
+      },
+      {
+        "span": "zhou",
+        "dynasty": "Zhou",
+        "start_year": -1046,
+        "end_year": -256,
+        "description": "Divided into Western Zhou and Eastern Zhou"
+      },
+      {
+        "span": "zhanguo",
+        "dynasty": "Warring States",
+        "start_year": -475,
+        "end_year": -221,
+        "description": "Seven powerful states competing, Shang Yang's reforms promoted social changes"
+      },
+      {
+        "span": "qin",
+        "dynasty": "Qin",
+        "start_year": -221,
+        "end_year": -207,
+        "description": "First centralized unified dynasty in Chinese history"
+      },
+      {
+        "span": "han",
+        "dynasty": "Han",
+        "start_year": -202,
+        "end_year": 220,
+        "description": "Divided into Western Han and Eastern Han"
+      },
+      {
+        "span": "sanguo",
+        "dynasty": "Three Kingdoms",
+        "start_year": 220,
+        "end_year": 280,
+        "description": "Period of tripartite confrontation between Wei, Shu and Wu"
+      },
+      {
+        "span": "jin",
+        "dynasty": "Jin",
+        "start_year": 265,
+        "end_year": 420,
+        "description": "Divided into Western Jin and Eastern Jin"
+      },
+      {
+        "span": "nanbeichao",
+        "dynasty": "Northern and Southern Dynasties",
+        "start_year": 420,
+        "end_year": 589,
+        "description": "Period of confrontation between northern and southern regimes"
+      },
+      {
+        "span": "sui",
+        "dynasty": "Sui",
+        "start_year": 581,
+        "end_year": 618,
+        "description": "Short but important unified dynasty"
+      },
+      {
+        "span": "tang",
+        "dynasty": "Tang",
+        "start_year": 618,
+        "end_year": 907,
+        "description": "One of the most prosperous dynasties in Chinese history"
+      },
+      {
+        "span": "wudaishiguo",
+        "dynasty": "Five Dynasties and Ten Kingdoms",
+        "start_year": 907,
+        "end_year": 979,
+        "description": "Five dynasties in central plains coexisted with ten regimes, ended by Northern Song's conquest of Northern Han"
+      },
+      {
+        "span": "song",
+        "dynasty": "Song",
+        "start_year": 960,
+        "end_year": 1279,
+        "description": "Divided into Northern Song and Southern Song"
+      },
+      {
+        "span": "yuan",
+        "dynasty": "Yuan",
+        "start_year": 1271,
+        "end_year": 1368,
+        "description": "First unified dynasty established by ethnic minorities in Chinese history"
+      },
+      {
+        "span": "ming",
+        "dynasty": "Ming",
+        "start_year": 1368,
+        "end_year": 1644,
+        "description": "Last unified dynasty established by Han Chinese"
+      },
+      {
+        "span": "qing",
+        "dynasty": "Qing",
+        "start_year": 1636,
+        "end_year": 1912,
+        "description": "Last feudal dynasty in Chinese history"
+      }
+    ]
+  },
+  {
+    "civilization": "South Asian Civilization (Ancient India)",
+    "spans": [
+      {
+        "span": "indus valley civilization",
+        "dynasty": "Indus Valley Civilization",
+        "start_year": -2600,
+        "end_year": -1900,
+        "description": "Earliest civilization in South Asia"
+      },
+      {
+        "span": "vedic period",
+        "dynasty": "Vedic Period",
+        "start_year": -1500,
+        "end_year": -500,
+        "description": "Period of Vedic literature formation"
+      },
+      {
+        "span": "mahajanapadas",
+        "dynasty": "Mahajanapadas Period",
+        "start_year": -600,
+        "end_year": -300,
+        "description": "Period of competing states in Indian subcontinent"
+      },
+      {
+        "span": "maurya empire",
+        "dynasty": "Maurya Empire",
+        "start_year": -322,
+        "end_year": -185,
+        "description": "First unified empire in India"
+      },
+      {
+        "span": "gupta empire",
+        "dynasty": "Gupta Empire",
+        "start_year": 320,
+        "end_year": 550,
+        "description": "Golden Age of classical India"
+      },
+      {
+        "span": "delhi sultanate",
+        "dynasty": "Delhi Sultanate",
+        "start_year": 1206,
+        "end_year": 1526,
+        "description": "Islamic regime in North India, replaced by Mughal Empire in 1526"
+      },
+      {
+        "span": "mughal empire",
+        "dynasty": "Mughal Empire",
+        "start_year": 1526,
+        "end_year": 1857,
+        "description": "Islamic empire established by Babur, last emperor deposed by British in 1857"
+      }
+    ]
+  },
+  {
+    "civilization": "West Asian Civilization (Mesopotamia)",
+    "spans": [
+      {
+        "span": "early dynastic sumer",
+        "dynasty": "Early Dynastic Sumer",
+        "start_year": -2900,
+        "end_year": -2334,
+        "description": "Earliest city-state civilization in Mesopotamia"
+      },
+      {
+        "span": "akkadian empire",
+        "dynasty": "Akkadian Empire",
+        "start_year": -2334,
+        "end_year": -2154,
+        "description": "First empire to unify Mesopotamia"
+      }
+    ]
+  }
+]
