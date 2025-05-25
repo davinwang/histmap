@@ -204,8 +204,8 @@ export function setupSlider() {
                         tooltip.className = 'dynasty-tooltip';
                         tooltip.innerHTML = `
                             <strong>${dynasty.dynasty}</strong><br>
-                            开始年份: ${formatYear(dynasty.start_year)}<br>
-                            结束年份: ${formatYear(dynasty.end_year)}<br>
+                            开始年份: ${formatYear(dynasty.start_year, document.getElementById('language').value || 'zh')}<br>
+                            结束年份: ${formatYear(dynasty.end_year, document.getElementById('language').value || 'zh')}<br>
                             ${dynasty.description || '暂无描述'}<br>
                         `;
                         tooltip.style.position = 'absolute';
@@ -368,8 +368,6 @@ export function setupSlider() {
             thumbTo.addEventListener('mousedown', startDrag);
             thumbFrom.addEventListener('touchstart', startDrag);
             thumbTo.addEventListener('touchstart', startDrag);
-
-
         })
         .catch(error => console.error('数据加载失败:', error));
 }

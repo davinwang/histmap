@@ -110,6 +110,82 @@
         ]
     },
     {
+        "civilization": "Japan",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "yayoi",
+                "dynasty": "Yayoi Period",
+                "start_year": -300,
+                "end_year": 250,
+                "description": "The period when rice cultivation and metal tools were introduced to Japan"
+            },
+            {
+                "span": "kofun",
+                "dynasty": "Kofun Period",
+                "start_year": 250,
+                "end_year": 538,
+                "description": "The rise of the Yamato regime"
+            },
+            {
+                "span": "asuka",
+                "dynasty": "Asuka Period",
+                "start_year": 538,
+                "end_year": 710,
+                "description": "Buddhism was introduced to Japan"
+            },
+            {
+                "span": "nara",
+                "dynasty": "Nara Period",
+                "start_year": 710,
+                "end_year": 794,
+                "description": "The first period of a fixed capital in Japan"
+            },
+            {
+                "span": "heian",
+                "dynasty": "Heian Period",
+                "start_year": 794,
+                "end_year": 1185,
+                "description": "A period of flourishing aristocratic culture"
+            },
+            {
+                "span": "kamakura",
+                "dynasty": "Kamakura Period",
+                "start_year": 1185,
+                "end_year": 1333,
+                "description": "The establishment of the samurai regime"
+            },
+            {
+                "span": "muromachi",
+                "dynasty": "Muromachi Period",
+                "start_year": 1336,
+                "end_year": 1573,
+                "description": "The period of rule by the Ashikaga shogunate"
+            },
+            {
+                "span": "azuchi-momoyama",
+                "dynasty": "Azuchi-Momoyama Period",
+                "start_year": 1573,
+                "end_year": 1603,
+                "description": "The late period of the Warring States"
+            },
+            {
+                "span": "edo",
+                "dynasty": "Edo Period",
+                "start_year": 1603,
+                "end_year": 1868,
+                "description": "The period of rule by the Tokugawa shogunate"
+            },
+            {
+                "span": "meiji",
+                "dynasty": "Meiji Period",
+                "start_year": 1868,
+                "end_year": 1912,
+                "description": "The beginning of Japan's modernization"
+            }
+        ]
+    },
+    {
         "civilization": "South Korea",
         "drillup": "historical_spans.json",
         "spans": [
@@ -188,82 +264,6 @@
                 "start_year": 1351,
                 "end_year": 1767,
                 "description": "An important dynasty in Thai history"
-            }
-        ]
-    },
-    {
-        "civilization": "Japan",
-        "drillup": "historical_spans.json",
-        "spans": [
-            {
-                "span": "yayoi",
-                "dynasty": "Yayoi Period",
-                "start_year": -300,
-                "end_year": 250,
-                "description": "The period when rice cultivation and metal tools were introduced to Japan"
-            },
-            {
-                "span": "kofun",
-                "dynasty": "Kofun Period",
-                "start_year": 250,
-                "end_year": 538,
-                "description": "The rise of the Yamato regime"
-            },
-            {
-                "span": "asuka",
-                "dynasty": "Asuka Period",
-                "start_year": 538,
-                "end_year": 710,
-                "description": "Buddhism was introduced to Japan"
-            },
-            {
-                "span": "nara",
-                "dynasty": "Nara Period",
-                "start_year": 710,
-                "end_year": 794,
-                "description": "The first period of a fixed capital in Japan"
-            },
-            {
-                "span": "heian",
-                "dynasty": "Heian Period",
-                "start_year": 794,
-                "end_year": 1185,
-                "description": "A period of flourishing aristocratic culture"
-            },
-            {
-                "span": "kamakura",
-                "dynasty": "Kamakura Period",
-                "start_year": 1185,
-                "end_year": 1333,
-                "description": "The establishment of the samurai regime"
-            },
-            {
-                "span": "muromachi",
-                "dynasty": "Muromachi Period",
-                "start_year": 1336,
-                "end_year": 1573,
-                "description": "The period of rule by the Ashikaga shogunate"
-            },
-            {
-                "span": "azuchi-momoyama",
-                "dynasty": "Azuchi-Momoyama Period",
-                "start_year": 1573,
-                "end_year": 1603,
-                "description": "The late period of the Warring States"
-            },
-            {
-                "span": "edo",
-                "dynasty": "Edo Period",
-                "start_year": 1603,
-                "end_year": 1868,
-                "description": "The period of rule by the Tokugawa shogunate"
-            },
-            {
-                "span": "meiji",
-                "dynasty": "Meiji Period",
-                "start_year": 1868,
-                "end_year": 1912,
-                "description": "The beginning of Japan's modernization"
             }
         ]
     }

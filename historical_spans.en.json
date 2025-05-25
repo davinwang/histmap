@@ -35,13 +35,6 @@
         "description": "Divided into the Western Zhou and Eastern Zhou"
       },
       {
-        "span": "zhanguo",
-        "dynasty": "Warring States",
-        "start_year": -475,
-        "end_year": -221,
-        "description": "Period of seven powers fighting for dominance, Shang Yang's reforms promoted social transformation"
-      },
-      {
         "span": "qin",
         "dynasty": "Qin",
         "start_year": -221,

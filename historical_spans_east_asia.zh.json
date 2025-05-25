@@ -1,7 +1,7 @@
 [
   {
     "civilization": "中国",
-    "drillup":"historical_spans.json",
+    "drillup": "historical_spans.json",
     "spans": [
       {
         "span": "xia",
@@ -110,90 +110,8 @@
     ]
   },
   {
-    "civilization": "韩国",
-    "drillup":"historical_spans.json",
-    "spans": [
-      {
-        "span": "gojoseon",
-        "dynasty": "古朝鲜",
-        "start_year": -2333,
-        "end_year": -108,
-        "description": "韩国最早的王朝"
-      },
-      {
-        "span": "three kingdoms",
-        "dynasty": "三国时代",
-        "start_year": 57,
-        "end_year": 668,
-        "description": "高句丽、百济、新罗三国鼎立时期"
-      },
-      {
-        "span": "unified silla",
-        "dynasty": "统一新罗",
-        "start_year": 668,
-        "end_year": 935,
-        "description": "新罗统一朝鲜半岛"
-      },
-      {
-        "span": "goryeo",
-        "dynasty": "高丽",
-        "start_year": 918,
-        "end_year": 1392,
-        "description": "佛教文化繁荣时期"
-      },
-      {
-        "span": "joseon",
-        "dynasty": "朝鲜",
-        "start_year": 1392,
-        "end_year": 1897,
-        "description": "朝鲜半岛最后一个封建王朝"
-      }
-    ]
-  },
-  {
-    "civilization": "东南亚",
-    "drillup":"historical_spans.json",
-    "spans": [
-      {
-        "span": "funan",
-        "dynasty": "扶南",
-        "start_year": 50,
-        "end_year": 550,
-        "description": "东南亚最早的印度化国家"
-      },
-      {
-        "span": "srivijaya",
-        "dynasty": "室利佛逝",
-        "start_year": 650,
-        "end_year": 1377,
-        "description": "马来群岛的海上帝国"
-      },
-      {
-        "span": "angkor",
-        "dynasty": "吴哥",
-        "start_year": 802,
-        "end_year": 1431,
-        "description": "柬埔寨高棉帝国鼎盛时期"
-      },
-      {
-        "span": "majapahit",
-        "dynasty": "满者伯夷",
-        "start_year": 1293,
-        "end_year": 1527,
-        "description": "爪哇最后一个印度教大帝国"
-      },
-      {
-        "span": "ayutthaya",
-        "dynasty": "阿瑜陀耶",
-        "start_year": 1351,
-        "end_year": 1767,
-        "description": "泰国历史上的重要王朝"
-      }
-    ]
-  },
-  {
     "civilization": "日本",
-    "drillup":"historical_spans.json",
+    "drillup": "historical_spans.json",
     "spans": [
       {
         "span": "yayoi",
@@ -264,6 +182,88 @@
         "start_year": 1868,
         "end_year": 1912,
         "description": "日本现代化开端"
+      }
+    ]
+  },
+  {
+    "civilization": "韩国",
+    "drillup": "historical_spans.json",
+    "spans": [
+      {
+        "span": "gojoseon",
+        "dynasty": "古朝鲜",
+        "start_year": -2333,
+        "end_year": -108,
+        "description": "韩国最早的王朝"
+      },
+      {
+        "span": "three kingdoms",
+        "dynasty": "三国时代",
+        "start_year": 57,
+        "end_year": 668,
+        "description": "高句丽、百济、新罗三国鼎立时期"
+      },
+      {
+        "span": "unified silla",
+        "dynasty": "统一新罗",
+        "start_year": 668,
+        "end_year": 935,
+        "description": "新罗统一朝鲜半岛"
+      },
+      {
+        "span": "goryeo",
+        "dynasty": "高丽",
+        "start_year": 918,
+        "end_year": 1392,
+        "description": "佛教文化繁荣时期"
+      },
+      {
+        "span": "joseon",
+        "dynasty": "朝鲜",
+        "start_year": 1392,
+        "end_year": 1897,
+        "description": "朝鲜半岛最后一个封建王朝"
+      }
+    ]
+  },
+  {
+    "civilization": "东南亚",
+    "drillup": "historical_spans.json",
+    "spans": [
+      {
+        "span": "funan",
+        "dynasty": "扶南",
+        "start_year": 50,
+        "end_year": 550,
+        "description": "东南亚最早的印度化国家"
+      },
+      {
+        "span": "srivijaya",
+        "dynasty": "室利佛逝",
+        "start_year": 650,
+        "end_year": 1377,
+        "description": "马来群岛的海上帝国"
+      },
+      {
+        "span": "angkor",
+        "dynasty": "吴哥",
+        "start_year": 802,
+        "end_year": 1431,
+        "description": "柬埔寨高棉帝国鼎盛时期"
+      },
+      {
+        "span": "majapahit",
+        "dynasty": "满者伯夷",
+        "start_year": 1293,
+        "end_year": 1527,
+        "description": "爪哇最后一个印度教大帝国"
+      },
+      {
+        "span": "ayutthaya",
+        "dynasty": "阿瑜陀耶",
+        "start_year": 1351,
+        "end_year": 1767,
+        "description": "泰国历史上的重要王朝"
       }
     ]
   }
