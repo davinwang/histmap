@@ -2,6 +2,17 @@
 import { formatYear, getDynastyColor } from './common.js';
 
 export function loadHistoricalEvents(map, lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
+    // Add event listener for language changes
+    document.addEventListener('languageChanged', () => {
+        loadHistoricalEvents(map, lat, lon, distance, yearFrom, yearTo);
+    });
+
+    // Clear existing markers
+    map.eachLayer(layer => {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
 
     // Load historical events data
     fetch(`historical_events.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_events.json'))
@@ -30,7 +41,9 @@ export function loadHistoricalEvents(map, lat = null, lon = null, distance = nul
                         icon: L.divIcon({
                             html: `<div class="dynasty-marker" style="--dynasty-color: ${getDynastyColor(hist_event.dynasty)}"></div>`,
                             className: 'dynasty-marker',
-                            iconSize: [25, 41]
+                            iconSize: [25, 41],
+                            iconAnchor: [12.5, 41],
+                            popupAnchor: [0, -41]
                         })
                     })
                         .addTo(map)
