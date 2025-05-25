@@ -1,8 +1,20 @@
 
 var START_YEAR = -4000;
 
-export function formatYear(year) {
-    return year < 0 ? `公元前${Math.abs(year)}年` : `公元${year}年`;
+export function formatYear(year, language = 'zh') {
+    const translations = {
+        'zh': {
+            bc: '公元前',
+            ad: '公元'
+        },
+        'en': {
+            bc: 'BCE',
+            ad: 'CE'
+        }
+    };
+    return year < 0 
+        ? `${translations[language].bc}${Math.abs(year)}` 
+        : `${translations[language].ad}${year}`;
 }
 
 export function percentToYear(percent) {
