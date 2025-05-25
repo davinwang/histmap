@@ -1,4 +1,4 @@
-import { formatYear, percentToYear, yearToPercent, getDynastyColor } from './common.js';
+import { CURRENT_LANGUAGE, formatYear, percentToYear, yearToPercent, getDynastyColor, getTranslatedString } from './common.js';
 
 
 // Function to set up the slider with data
@@ -9,8 +9,8 @@ function addDynastyTooltipEvents(label, dynasty) {
         tooltip.className = 'dynasty-tooltip';
         tooltip.innerHTML = `
             <strong>${dynasty.dynasty}</strong><br>
-            开始年份: ${formatYear(dynasty.start_year, document.getElementById('language').value || 'zh')}<br>
-            结束年份: ${formatYear(dynasty.end_year, document.getElementById('language').value || 'zh')}<br>
+            ${getTranslatedString('start_year')}: ${formatYear(dynasty.start_year)}<br>
+            ${getTranslatedString('end_year')}: ${formatYear(dynasty.end_year)}<br>
             ${dynasty.description || '暂无描述'}<br>
         `;
         tooltip.style.position = 'absolute';
@@ -31,8 +31,8 @@ function addDynastyTooltipEvents(label, dynasty) {
         tooltip.className = 'dynasty-tooltip';
         tooltip.innerHTML = `
             <strong>${dynasty.dynasty}</strong><br>
-            开始年份: ${formatYear(dynasty.start_year, document.getElementById('language').value || 'zh')}<br>
-            结束年份: ${formatYear(dynasty.end_year, document.getElementById('language').value || 'zh')}<br>
+            ${getTranslatedString('start_year')}: ${formatYear(dynasty.start_year)}<br>
+            ${getTranslatedString('end_year')}: ${formatYear(dynasty.end_year)}<br>
             ${dynasty.description || '暂无描述'}<br>
         `;
         tooltip.style.position = 'absolute';
@@ -64,7 +64,7 @@ export function setupSliderWithData(historicalSpans) {
             backBtn.className = 'nav-btn back-btn';
             backBtn.innerHTML = '&lt;';
             backBtn.addEventListener('click', () => {
-                fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
+                fetch(civilization.drillup.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drillup))
                     .then(response => response.json())
                     .then(data => refreshSliderContainer(data));
             });
@@ -82,7 +82,7 @@ export function setupSliderWithData(historicalSpans) {
             eyeBtn.className = 'nav-btn eye-btn';
             eyeBtn.innerHTML = '👁';
             eyeBtn.addEventListener('click', () => {
-                fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
+                fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
                     .then(response => response.json())
                     .then(data => refreshSliderContainer(data));
             });
@@ -122,7 +122,7 @@ function addNavigationEvents(slider, civilization) {
     // Double-click for drilldown
     slider.addEventListener('dblclick', (e) => {
         if (civilization.drilldown) {
-            fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
+            fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
                 .then(response => response.json())
                 .then(data => {
                     // Clear existing sliders
@@ -140,7 +140,7 @@ function addNavigationEvents(slider, civilization) {
     slider.addEventListener('contextmenu', (e) => {
         e.preventDefault();
         if (civilization.drillup) {
-            fetch(civilization.drillup.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drillup))
+            fetch(civilization.drillup.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drillup))
                 .then(response => response.json())
                 .then(data => refreshSliderContainer(data)).catch(error => console.error('Drillup data loading failed:', error));
         }
@@ -150,13 +150,13 @@ function addNavigationEvents(slider, civilization) {
 export function setupSlider() {
     // Add event listener for language changes
     document.addEventListener('languageChanged', () => {
-        fetch(`historical_spans.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_spans.json'))
+        fetch(`historical_spans.${CURRENT_LANGUAGE}.json`).catch(() => fetch('historical_spans.json'))
             .then(response => response.json())
             .then(data => refreshSliderContainer(data));
     });
 
     // Add slider drag functionality (same as original)
-    fetch(`historical_spans.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_spans.json'))
+    fetch(`historical_spans.${CURRENT_LANGUAGE}.json`).catch(() => fetch('historical_spans.json'))
         .then(response => response.json())
         .then(historicalSpans => {
             // Process all available civilizations
@@ -179,7 +179,7 @@ export function setupSlider() {
                     eyeBtn.className = 'nav-btn eye-btn';
                     eyeBtn.innerHTML = '👁';
                     eyeBtn.addEventListener('click', () => {
-                        fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
+                        fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
                             .then(response => response.json())
                             .then(data => refreshSliderContainer(data));
                     });
@@ -204,8 +204,8 @@ export function setupSlider() {
                         tooltip.className = 'dynasty-tooltip';
                         tooltip.innerHTML = `
                             <strong>${dynasty.dynasty}</strong><br>
-                            开始年份: ${formatYear(dynasty.start_year, document.getElementById('language').value || 'zh')}<br>
-                            结束年份: ${formatYear(dynasty.end_year, document.getElementById('language').value || 'zh')}<br>
+                            ${getTranslatedString('start_year')}: ${formatYear(dynasty.start_year)}<br>
+                            ${getTranslatedString('end_year')}: ${formatYear(dynasty.end_year)}<br>
                             ${dynasty.description || '暂无描述'}<br>
                         `;
                         tooltip.style.position = 'absolute';
@@ -252,7 +252,7 @@ export function setupSlider() {
                 // Add double-click events
                 slider.addEventListener('dblclick', (e) => {
                     if (civilization.drilldown) {
-                        fetch(civilization.drilldown.replace('.json', `.${document.getElementById('language').value || 'zh'}.json`)).catch(() => fetch(civilization.drilldown))
+                        fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
                             .then(response => response.json())
                             .then(data => {
                                 // Clear existing sliders

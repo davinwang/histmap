@@ -1,5 +1,5 @@
 
-import { formatYear, getDynastyColor } from './common.js';
+import { CURRENT_LANGUAGE, formatYear, getDynastyColor } from './common.js';
 
 export function loadHistoricalEvents(map, lat = null, lon = null, distance = null, yearFrom = null, yearTo = null) {
     // Add event listener for language changes
@@ -15,7 +15,7 @@ export function loadHistoricalEvents(map, lat = null, lon = null, distance = nul
     });
 
     // Load historical events data
-    fetch(`historical_events.${document.getElementById('language').value || 'zh'}.json`).catch(() => fetch('historical_events.json'))
+    fetch(`historical_events.${CURRENT_LANGUAGE}.json`).catch(() => fetch('historical_events.json'))
         .then(response => response.json())
         .then(events => {
             function formatDate(hist_event) {
@@ -54,11 +54,6 @@ export function loadHistoricalEvents(map, lat = null, lon = null, distance = nul
                         console.log(`Marker mouseover: ${hist_event.event}`);
                         this.openPopup();
                     });
-                    // leave the marker open when the mouse is over it
-                    // marker.on('mouseout', function () {
-                    //     console.log(`Marker mouseout: ${event.event}`);
-                    //     this.closePopup();
-                    // });
                 });
         })
         .catch(error => console.error('数据加载失败:', error));

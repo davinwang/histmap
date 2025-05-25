@@ -1,4 +1,5 @@
 
+import { CURRENT_LANGUAGE } from './common.js';
 import { setupSlider } from './slider.js';
 import { loadHistoricalEvents, fetchMongoDBEvents, fetchElasticsearchEvents } from './load_events.js';
 
@@ -7,9 +8,8 @@ Promise.all([
   new Promise((resolve) => navigator.geolocation.getCurrentPosition(resolve,
     () => resolve({ coords: { latitude: 30.0586, longitude: 114.3480 } }))
   ),
-  fetch(`historical_events.${document.getElementById('language').value || 'zh'}.json`)
+  fetch(`historical_events.${CURRENT_LANGUAGE}.json`).catch(() => fetch('historical_events.json'))
     .then(r => r.json())
-    .catch(() => fetch('historical_events.json').then(r => r.json()))
 ]).then(([position, events]) => {
   const map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 5);
 

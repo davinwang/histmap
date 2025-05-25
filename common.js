@@ -1,7 +1,8 @@
 
 var START_YEAR = -4000;
+export const CURRENT_LANGUAGE = document.getElementById('language')?.value || 'zh';
 
-export function formatYear(year, language = 'zh') {
+export function formatYear(year, language = CURRENT_LANGUAGE) {
     const translations = {
         'zh': {
             bc: '公元前',
@@ -44,4 +45,24 @@ export function getDynastyColor(name) {
     // Convert hash to hue angle (0-360)
     const h = Math.abs(hash) % 360;
     return `hsl(${h}, 70%, 40%)`;
+}
+
+export function getTranslatedString(stringTag, language=CURRENT_LANGUAGE){
+    const translations = {
+        'zh': {
+            'start_year': '开始年份',
+            'end_year': '结束年份',
+            'year': '年份',
+            'dynasty': '朝代',
+            'event': '事件',
+        },
+        'en': {
+            'start_year': 'Start Year',
+            'end_year': 'End Year',
+            'year': 'Year',
+            'dynasty': 'Dynasty',
+            'event': 'Event',
+        }
+    }
+    return translations[language][stringTag] || stringTag;
 }
