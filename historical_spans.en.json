@@ -6,7 +6,7 @@
       "coordinates": [
         [
           [
-            "East Asian geographical boundaries"
+            "Eastern Asian Geographic Boundary"
           ]
         ]
       ]
@@ -25,105 +25,105 @@
         "dynasty": "Shang",
         "start_year": -1600,
         "end_year": -1046,
-        "description": "Highly developed bronze culture"
+        "description": "Bronze culture developed highly"
       },
       {
         "span": "zhou",
         "dynasty": "Zhou",
         "start_year": -1046,
         "end_year": -256,
-        "description": "Divided into Western Zhou and Eastern Zhou"
+        "description": "Divided into the Western Zhou and Eastern Zhou"
       },
       {
         "span": "zhanguo",
         "dynasty": "Warring States",
         "start_year": -475,
         "end_year": -221,
-        "description": "Seven powerful states competing, Shang Yang's reforms promoted social changes"
+        "description": "Period of seven powers fighting for dominance, Shang Yang's reforms promoted social transformation"
       },
       {
         "span": "qin",
         "dynasty": "Qin",
         "start_year": -221,
         "end_year": -207,
-        "description": "First centralized unified dynasty in Chinese history"
+        "description": "The first centralized dynasty in Chinese history"
       },
       {
         "span": "han",
         "dynasty": "Han",
         "start_year": -202,
         "end_year": 220,
-        "description": "Divided into Western Han and Eastern Han"
+        "description": "Divided into the Western Han and Eastern Han"
       },
       {
         "span": "sanguo",
         "dynasty": "Three Kingdoms",
         "start_year": 220,
         "end_year": 280,
-        "description": "Period of tripartite confrontation between Wei, Shu and Wu"
+        "description": "Period of the Three Kingdoms: Wei, Shu, and Wu"
       },
       {
         "span": "jin",
         "dynasty": "Jin",
         "start_year": 265,
         "end_year": 420,
-        "description": "Divided into Western Jin and Eastern Jin"
+        "description": "Divided into the Western Jin and Eastern Jin"
       },
       {
         "span": "nanbeichao",
         "dynasty": "Northern and Southern Dynasties",
         "start_year": 420,
         "end_year": 589,
-        "description": "Period of confrontation between northern and southern regimes"
+        "description": "Period of confrontation between Northern and Southern regimes"
       },
       {
         "span": "sui",
         "dynasty": "Sui",
         "start_year": 581,
         "end_year": 618,
-        "description": "Short but important unified dynasty"
+        "description": "A brief but important unified dynasty"
       },
       {
         "span": "tang",
         "dynasty": "Tang",
         "start_year": 618,
         "end_year": 907,
-        "description": "One of the most prosperous dynasties in Chinese history"
+        "description": "One of the strongest dynasties in Chinese history"
       },
       {
         "span": "wudaishiguo",
         "dynasty": "Five Dynasties and Ten Kingdoms",
         "start_year": 907,
         "end_year": 979,
-        "description": "Five dynasties in central plains coexisted with ten regimes, ended by Northern Song's conquest of Northern Han"
+        "description": "Five dynasties in the Central Plains and ten regional regimes coexisted until the Northern Song dynasty ended the Northern Han"
       },
       {
         "span": "song",
         "dynasty": "Song",
         "start_year": 960,
         "end_year": 1279,
-        "description": "Divided into Northern Song and Southern Song"
+        "description": "Divided into the Northern Song and Southern Song"
       },
       {
         "span": "yuan",
         "dynasty": "Yuan",
         "start_year": 1271,
         "end_year": 1368,
-        "description": "First unified dynasty established by ethnic minorities in Chinese history"
+        "description": "The first unified dynasty established by a minority group in Chinese history"
       },
       {
         "span": "ming",
         "dynasty": "Ming",
         "start_year": 1368,
         "end_year": 1644,
-        "description": "Last unified dynasty established by Han Chinese"
+        "description": "The last unified dynasty established by the Han people"
       },
       {
         "span": "qing",
         "dynasty": "Qing",
         "start_year": 1636,
         "end_year": 1912,
-        "description": "Last feudal dynasty in Chinese history"
+        "description": "The last feudal dynasty in Chinese history"
       }
     ]
   },
@@ -135,49 +135,49 @@
         "dynasty": "Indus Valley Civilization",
         "start_year": -2600,
         "end_year": -1900,
-        "description": "Earliest civilization in South Asia"
+        "description": "The earliest civilization in South Asia"
       },
       {
         "span": "vedic period",
         "dynasty": "Vedic Period",
         "start_year": -1500,
         "end_year": -500,
-        "description": "Period of Vedic literature formation"
+        "description": "Period when the Vedic texts were formed"
       },
       {
         "span": "mahajanapadas",
-        "dynasty": "Mahajanapadas Period",
+        "dynasty": "Sixteen Major States",
         "start_year": -600,
         "end_year": -300,
-        "description": "Period of competing states in Indian subcontinent"
+        "description": "Period of power struggles among states on the Indian subcontinent"
       },
       {
         "span": "maurya empire",
         "dynasty": "Maurya Empire",
         "start_year": -322,
         "end_year": -185,
-        "description": "First unified empire in India"
+        "description": "The first unified empire in India"
       },
       {
         "span": "gupta empire",
         "dynasty": "Gupta Empire",
         "start_year": 320,
         "end_year": 550,
-        "description": "Golden Age of classical India"
+        "description": "India's classical golden age"
       },
       {
         "span": "delhi sultanate",
         "dynasty": "Delhi Sultanate",
         "start_year": 1206,
         "end_year": 1526,
-        "description": "Islamic regime in North India, replaced by Mughal Empire in 1526"
+        "description": "An Islamic regime in North India, replaced by the Mughal Empire in 1526"
       },
       {
         "span": "mughal empire",
         "dynasty": "Mughal Empire",
         "start_year": 1526,
         "end_year": 1857,
-        "description": "Islamic empire established by Babur, last emperor deposed by British in 1857"
+        "description": "An Islamic empire established by Babur, the last emperor was abolished by the British in 1857"
       }
     ]
   },
@@ -186,17 +186,239 @@
     "spans": [
       {
         "span": "early dynastic sumer",
-        "dynasty": "Early Dynastic Sumer",
+        "dynasty": "Early Sumerian Dynasties",
         "start_year": -2900,
         "end_year": -2334,
-        "description": "Earliest city-state civilization in Mesopotamia"
+        "description": "The earliest city-state civilization in the Mesopotamia"
       },
       {
         "span": "akkadian empire",
         "dynasty": "Akkadian Empire",
         "start_year": -2334,
         "end_year": -2154,
-        "description": "First empire to unify Mesopotamia"
+        "description": "The first empire to unify Mesopotamia"
+      },
+      {
+        "span": "third dynasty of ur",
+        "dynasty": "Third Dynasty of Ur",
+        "start_year": -2112,
+        "end_year": -2004,
+        "description": "Period of Sumerian revival"
+      },
+      {
+        "span": "old babylonian empire",
+        "dynasty": "Old Babylonian Empire",
+        "start_year": -1894,
+        "end_year": -1595,
+        "description": "Period when the Code of Hammurabi was formulated"
+      },
+      {
+        "span": "achaemenid empire",
+        "dynasty": "Achaemenid Empire",
+        "start_year": -550,
+        "end_year": -330,
+        "description": "The first Persian Empire, founded by Cyrus the Great, ruled over Mesopotamia"
+      },
+      {
+        "span": "neo-babylonian empire",
+        "dynasty": "Neo-Babylonian Empire",
+        "start_year": -626,
+        "end_year": -539,
+        "description": "Period of Nebuchadnezzar II's rule"
+      }
+    ]
+  },
+  {
+    "civilization": "African Civilization (Ancient Egypt)",
+    "spans": [
+      {
+        "span": "early dynastic period",
+        "dynasty": "Early Dynastic Period",
+        "start_year": -3100,
+        "end_year": -2686,
+        "description": "The beginning of Egyptian unification, including the 1st and 2nd dynasties"
+      },
+      {
+        "span": "old kingdom",
+        "dynasty": "Old Kingdom",
+        "start_year": -2686,
+        "end_year": -2181,
+        "description": "Golden age of pyramid construction, including the 3rd to 6th dynasties"
+      },
+      {
+        "span": "middle kingdom",
+        "dynasty": "Middle Kingdom",
+        "start_year": -2055,
+        "end_year": -1650,
+        "description": "Period of Egyptian revival, including the 11th and 12th dynasties"
+      },
+      {
+        "span": "new kingdom",
+        "dynasty": "New Kingdom",
+        "start_year": -1550,
+        "end_year": -1069,
+        "description": "Egyptian imperial period, including the 18th to 20th dynasties"
+      },
+      {
+        "span": "ptolemaic kingdom",
+        "dynasty": "Ptolemaic Kingdom",
+        "start_year": -305,
+        "end_year": -30,
+        "description": "Hellenistic Egyptian dynasty, Cleopatra VII was the last pharaoh"
+      },
+      {
+        "span": "roman_africa",
+        "dynasty": "Roman Empire",
+        "start_year": -146,
+        "end_year": 476,
+        "description": "Controlled the North African Mediterranean coast from the Roman Republic to the Western Roman Empire, established the province of Africa"
+      },
+      {
+        "span": "byzantine_africa",
+        "dynasty": "Byzantine Empire",
+        "start_year": 533,
+        "end_year": 698,
+        "description": "The Eastern Roman Empire (Byzantium) reconquered North Africa, controlled Carthage and other areas, later captured by the Arabs"
+      },
+      {
+        "span": "fatimid_caliphate",
+        "dynasty": "Fatimid Caliphate",
+        "start_year": 909,
+        "end_year": 1171,
+        "description": "Shia Islamic regime that controlled North Africa and Egypt, with capitals in Tunis and Cairo"
+      },
+      {
+        "span": "mali_empire",
+        "dynasty": "Mali Empire",
+        "start_year": 1235,
+        "end_year": 1600,
+        "description": "Center of gold trade in West Africa, with Timbuktu as a cultural hub, founded by Sundiata Keita"
+      },
+      {
+        "span": "songhai_empire",
+        "dynasty": "Songhai Empire",
+        "start_year": 1464,
+        "end_year": 1591,
+        "description": "Inherited the trade networks of the Mali Empire, expanded militarily to control West Africa, with its capital at Gao"
+      }
+    ]
+  },
+  {
+    "civilization": "European Civilization",
+    "drilldown": "historical_spans_europe.json",
+    "spans": [
+      {
+        "span": "minoan civilization",
+        "dynasty": "Minoan Civilization",
+        "start_year": -2700,
+        "end_year": -1450,
+        "description": "Bronze Age civilization on the island of Crete"
+      },
+      {
+        "span": "mycenaean greece",
+        "dynasty": "Mycenaean Civilization",
+        "start_year": -1600,
+        "end_year": -1100,
+        "description": "Bronze Age civilization on the Greek mainland"
+      },
+      {
+        "span": "archaic greece",
+        "dynasty": "Archaic Period",
+        "start_year": -800,
+        "end_year": -480,
+        "description": "Period of formation of Greek city-states"
+      },
+      {
+        "span": "classical greece",
+        "dynasty": "Classical Greece",
+        "start_year": -480,
+        "end_year": -323,
+        "description": "Golden age of Greek culture"
+      },
+      {
+        "span": "roman kingdom",
+        "dynasty": "Roman Kingdom",
+        "start_year": -753,
+        "end_year": -509,
+        "description": "Roman Kingdom period"
+      },
+      {
+        "span": "roman republic",
+        "dynasty": "Roman Republic",
+        "start_year": -509,
+        "end_year": -27,
+        "description": "Period of the Roman Republic"
+      },
+      {
+        "span": "roman empire",
+        "dynasty": "Roman Empire",
+        "start_year": -27,
+        "end_year": 476,
+        "description": "Roman Empire period"
+      },
+      {
+        "span": "middle ages",
+        "dynasty": "Middle Ages",
+        "start_year": 476,
+        "end_year": 1500,
+        "description": "European feudal period, ending with the fall of Constantinople and the Age of Exploration"
+      },
+      {
+        "span": "renaissance",
+        "dynasty": "Renaissance",
+        "start_year": 1300,
+        "end_year": 1600,
+        "description": "European cultural revival movement, from Dante to Shakespeare"
+      }
+    ]
+  },
+  {
+    "civilization": "American Civilization",
+    "drilldown": "historical_spans_americas.json",
+    "spans": [
+      {
+        "span": "caral civilization",
+        "dynasty": "Caral Civilization",
+        "start_year": -3000,
+        "end_year": -1800,
+        "description": "The oldest civilization in the Americas, located on the Peruvian Pacific coast, known as the Norte Chico civilization",
+        "tech_stage": "Neolithic Era",
+        "capital": null
+      },
+      {
+        "span": "olmec civilization",
+        "dynasty": "Olmec Civilization",
+        "start_year": -1200,
+        "end_year": -400,
+        "description": "Mother civilization of Mesoamerica"
+      },
+      {
+        "span": "classic maya",
+        "dynasty": "Classic Maya",
+        "start_year": 250,
+        "end_year": 900,
+        "description": "Peak period of the Mayan civilization"
+      },
+      {
+        "span": "aztec empire",
+        "dynasty": "Aztec Empire",
+        "start_year": 1428,
+        "end_year": 1521,
+        "description": "The last native empire in the Valley of Mexico"
+      },
+      {
+        "span": "inca empire",
+        "dynasty": "Inca Empire",
+        "start_year": 1438,
+        "end_year": 1533,
+        "description": "The largest empire in the Andes region"
+      },
+      {
+        "span": "mississippian culture",
+        "dynasty": "Mississippian Culture",
+        "start_year": 800,
+        "end_year": 1540,
+        "description": "Largest indigenous culture in North America, declined due to European colonization in the 16th century"
       }
     ]
   }

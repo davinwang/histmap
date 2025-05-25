@@ -1,0 +1,119 @@
+[
+    {
+        "civilization": "North American Civilizations",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "mississippian culture",
+                "dynasty": "Mississippi Culture",
+                "start_year": 800,
+                "end_year": 1600,
+                "description": "The mound-building culture of Eastern North America, characterized by large mounds and complex social structures",
+                "tech_stage": "Neolithic Age",
+                "capital": "Unknown"
+            },
+            {
+                "span": "post-columbian period",
+                "dynasty": "Post-Columbian Period",
+                "start_year": 1492,
+                "end_year": 1900,
+                "description": "The history of the Americas after the arrival of European colonizers, including the decline of indigenous cultures and the introduction of European culture",
+                "tech_stage": "Electrical Age",
+                "capital": "Unknown"
+            }
+        ]
+    },
+    {
+        "civilization": "Mesoamerican Civilizations",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "caral civilization",
+                "dynasty": "Caral Civilization",
+                "start_year": -3000,
+                "end_year": -1800,
+                "description": "The oldest civilization in the Americas, located on the Peruvian Pacific coast, known as the 'Little North' civilization",
+                "tech_stage": "Paleolithic Age",
+                "capital": "Unknown"
+            },
+            {
+                "span": "olmec civilization",
+                "dynasty": "Olmec Civilization",
+                "start_year": -1200,
+                "end_year": -400,
+                "description": "One of the earliest complex societies in Mesoamerica, characterized by huge stone carvings, religious ceremonies, and early urbanization",
+                "tech_stage": "Neolithic Age",
+                "capital": "Unknown"
+            },
+            {
+                "span": "moche civilization",
+                "dynasty": "Moche Culture",
+                "start_year": 100,
+                "end_year": 750,
+                "description": "An ancient civilization in northern Peru, known for its pottery and metalwork",
+                "tech_stage": "Bronze Age",
+                "capital": "Unknown"
+            },
+            {
+                "span": "classic maya",
+                "dynasty": "Classic Maya",
+                "start_year": 250,
+                "end_year": 900,
+                "description": "The peak period of the Maya civilization, with highly developed cities and writing systems",
+                "tech_stage": "Bronze Age",
+                "capital": "Unknown"
+            },
+            {
+                "span": "teotihuacan",
+                "dynasty": "Teotihuacan",
+                "start_year": 100,
+                "end_year": 750,
+                "description": "An ancient city located in modern-day Mexico, which was one of the largest cities in the Americas",
+                "tech_stage": "Bronze Age",
+                "capital": "Teotihuacan"
+            },
+            {
+                "span": "aztec empire",
+                "dynasty": "Aztec Empire",
+                "start_year": 1428,
+                "end_year": 1521,
+                "description": "The last indigenous empire in the Valley of Mexico, known for its military and religious systems",
+                "tech_stage": "Iron Age",
+                "capital": "Tenochtitlan"
+            }
+        ]
+    },
+    {
+        "civilization": "South American Civilizations",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "paracas culture",
+                "dynasty": "Paracas Culture",
+                "start_year": -900,
+                "end_year": 400,
+                "description": "An ancient culture in the Ica Region of southern Peru, closely related to the Chavín culture",
+                "tech_stage": "Neolithic Age",
+                "capital": "Unknown"
+            },
+            {
+                "span": "inca empire",
+                "dynasty": "Inca Empire",
+                "start_year": 1438,
+                "end_year": 1533,
+                "description": "The largest empire in the Andes region, known for its strict administrative system and road networks",
+                "tech_stage": "Iron Age",
+                "capital": "Cusco"
+            },
+            {
+                "span": "peruvian culture",
+                "dynasty": "Peruvian Culture",
+                "start_year": 1500,
+                "end_year": 1800,
+                "description": "The traditional culture of Peru, known for its unique geographical and historical background",
+                "tech_stage": "Steam Age",
+                "capital": "Lima"
+            }
+        ]
+    }
+]

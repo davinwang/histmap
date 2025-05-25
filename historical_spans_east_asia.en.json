@@ -1,0 +1,270 @@
+[
+    {
+        "civilization": "China",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "xia",
+                "dynasty": "Xia",
+                "start_year": -2070,
+                "end_year": -1600,
+                "description": "The first dynasty recorded in traditional literature"
+            },
+            {
+                "span": "shang",
+                "dynasty": "Shang",
+                "start_year": -1600,
+                "end_year": -1046,
+                "description": "Bronze culture flourished"
+            },
+            {
+                "span": "zhou",
+                "dynasty": "Zhou",
+                "start_year": -1046,
+                "end_year": -256,
+                "description": "Divided into Western Zhou and Eastern Zhou"
+            },
+            {
+                "span": "qin",
+                "dynasty": "Qin",
+                "start_year": -221,
+                "end_year": -207,
+                "description": "The first unified central authority dynasty in Chinese history"
+            },
+            {
+                "span": "han",
+                "dynasty": "Han",
+                "start_year": -202,
+                "end_year": 220,
+                "description": "Divided into Western Han and Eastern Han"
+            },
+            {
+                "span": "sanguo",
+                "dynasty": "Three Kingdoms",
+                "start_year": 220,
+                "end_year": 280,
+                "description": "The period of the tripartite rule of Wei, Shu, and Wu"
+            },
+            {
+                "span": "jin",
+                "dynasty": "Jin",
+                "start_year": 265,
+                "end_year": 420,
+                "description": "Divided into Western Jin and Eastern Jin"
+            },
+            {
+                "span": "nanbeichao",
+                "dynasty": "Southern and Northern Dynasties",
+                "start_year": 420,
+                "end_year": 589,
+                "description": "The period of confrontation between southern and northern regimes"
+            },
+            {
+                "span": "sui",
+                "dynasty": "Sui",
+                "start_year": 581,
+                "end_year": 618
+            },
+            {
+                "span": "tang",
+                "dynasty": "Tang",
+                "start_year": 618,
+                "end_year": 907,
+                "description": "One of the strongest dynasties in Chinese history"
+            },
+            {
+                "span": "wudaishiguo",
+                "dynasty": "Five Dynasties and Ten Kingdoms",
+                "start_year": 907,
+                "end_year": 960,
+                "description": "Five short-lived dynasties emerged successively in the Central Plains, while more than ten local regimes coexisted"
+            },
+            {
+                "span": "song",
+                "dynasty": "Song",
+                "start_year": 960,
+                "end_year": 1279,
+                "description": "Divided into Northern Song and Southern Song"
+            },
+            {
+                "span": "yuan",
+                "dynasty": "Yuan",
+                "start_year": 1271,
+                "end_year": 1368,
+                "description": "The first unified dynasty established by a minority group in Chinese history"
+            },
+            {
+                "span": "ming",
+                "dynasty": "Ming",
+                "start_year": 1368,
+                "end_year": 1644,
+                "description": "The last unified dynasty established by the Han ethnicity"
+            },
+            {
+                "span": "qing",
+                "dynasty": "Qing",
+                "start_year": 1636,
+                "end_year": 1912,
+                "description": "The last feudal dynasty in Chinese history"
+            }
+        ]
+    },
+    {
+        "civilization": "South Korea",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "gojoseon",
+                "dynasty": "Goguryeo",
+                "start_year": -2333,
+                "end_year": -108,
+                "description": "The earliest dynasty in Korea"
+            },
+            {
+                "span": "three kingdoms",
+                "dynasty": "Three Kingdoms Period",
+                "start_year": 57,
+                "end_year": 668,
+                "description": "A period of tripartite rule between Goguryeo, Baekje, and Silla"
+            },
+            {
+                "span": "unified silla",
+                "dynasty": "Unified Silla",
+                "start_year": 668,
+                "end_year": 935,
+                "description": "Silla unified the Korean Peninsula"
+            },
+            {
+                "span": "goryeo",
+                "dynasty": "Goryeo",
+                "start_year": 918,
+                "end_year": 1392,
+                "description": "A period of flourishing Buddhist culture"
+            },
+            {
+                "span": "joseon",
+                "dynasty": "Joseon",
+                "start_year": 1392,
+                "end_year": 1897,
+                "description": "The last feudal dynasty on the Korean Peninsula"
+            }
+        ]
+    },
+    {
+        "civilization": "Southeast Asia",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "funan",
+                "dynasty": "Funan",
+                "start_year": 50,
+                "end_year": 550,
+                "description": "The earliest Indianized state in Southeast Asia"
+            },
+            {
+                "span": "srivijaya",
+                "dynasty": "Srivijaya",
+                "start_year": 650,
+                "end_year": 1377,
+                "description": "A maritime empire in the Malay Archipelago"
+            },
+            {
+                "span": "angkor",
+                "dynasty": "Angkor",
+                "start_year": 802,
+                "end_year": 1431,
+                "description": "The peak period of the Khmer Empire in Cambodia"
+            },
+            {
+                "span": "majapahit",
+                "dynasty": "Majapahit",
+                "start_year": 1293,
+                "end_year": 1527,
+                "description": "The last major Hindu empire in Java"
+            },
+            {
+                "span": "ayutthaya",
+                "dynasty": "Ayutthaya",
+                "start_year": 1351,
+                "end_year": 1767,
+                "description": "An important dynasty in Thai history"
+            }
+        ]
+    },
+    {
+        "civilization": "Japan",
+        "drillup": "historical_spans.json",
+        "spans": [
+            {
+                "span": "yayoi",
+                "dynasty": "Yayoi Period",
+                "start_year": -300,
+                "end_year": 250,
+                "description": "The period when rice cultivation and metal tools were introduced to Japan"
+            },
+            {
+                "span": "kofun",
+                "dynasty": "Kofun Period",
+                "start_year": 250,
+                "end_year": 538,
+                "description": "The rise of the Yamato regime"
+            },
+            {
+                "span": "asuka",
+                "dynasty": "Asuka Period",
+                "start_year": 538,
+                "end_year": 710,
+                "description": "Buddhism was introduced to Japan"
+            },
+            {
+                "span": "nara",
+                "dynasty": "Nara Period",
+                "start_year": 710,
+                "end_year": 794,
+                "description": "The first period of a fixed capital in Japan"
+            },
+            {
+                "span": "heian",
+                "dynasty": "Heian Period",
+                "start_year": 794,
+                "end_year": 1185,
+                "description": "A period of flourishing aristocratic culture"
+            },
+            {
+                "span": "kamakura",
+                "dynasty": "Kamakura Period",
+                "start_year": 1185,
+                "end_year": 1333,
+                "description": "The establishment of the samurai regime"
+            },
+            {
+                "span": "muromachi",
+                "dynasty": "Muromachi Period",
+                "start_year": 1336,
+                "end_year": 1573,
+                "description": "The period of rule by the Ashikaga shogunate"
+            },
+            {
+                "span": "azuchi-momoyama",
+                "dynasty": "Azuchi-Momoyama Period",
+                "start_year": 1573,
+                "end_year": 1603,
+                "description": "The late period of the Warring States"
+            },
+            {
+                "span": "edo",
+                "dynasty": "Edo Period",
+                "start_year": 1603,
+                "end_year": 1868,
+                "description": "The period of rule by the Tokugawa shogunate"
+            },
+            {
+                "span": "meiji",
+                "dynasty": "Meiji Period",
+                "start_year": 1868,
+                "end_year": 1912,
+                "description": "The beginning of Japan's modernization"
+            }
+        ]
+    }
+]
