@@ -1,0 +1,30 @@
+[
+    {
+        "event": "周宣王中兴",
+        "year": -827,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "周宣王"
+        ],
+        "dynasty": "西周",
+        "description": "周宣王即位后整顿朝政，使周朝国力短暂恢复",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%91%A8%E5%AE%A3%E7%8E%8B"
+    },
+    {
+        "event": "国人暴动",
+        "year": -841,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "周厉王"
+        ],
+        "dynasty": "西周",
+        "description": "因周厉王暴政引发的平民起义，导致周厉王被流放",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%9B%BD%E4%BA%BA%E6%9A%B4%E5%8A%A8"
+    }
+]

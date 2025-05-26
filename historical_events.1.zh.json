@@ -1,0 +1,45 @@
+[
+    {
+        "event": "王莽篡汉",
+        "year": 9,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "王莽"
+        ],
+        "dynasty": "新朝",
+        "description": "王莽废汉孺子刘婴，自立为帝，建立新朝",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E7%8E%8B%E8%8E%BD"
+    },
+    {
+        "event": "绿林赤眉起义",
+        "year": 17,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "王匡",
+            "王凤"
+        ],
+        "dynasty": "新朝",
+        "description": "反对王莽统治的大规模农民起义，最终导致新朝灭亡",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E7%BB%BF%E6%9E%97%E8%B5%A4%E7%9C%89%E8%B5%B7%E4%B9%89"
+    },
+    {
+        "event": "光武中兴",
+        "year": 25,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "刘秀"
+        ],
+        "dynasty": "东汉",
+        "description": "刘秀称帝，重建汉朝，开创光武中兴",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%85%89%E6%AD%A6%E4%B8%AD%E5%85%B4"
+    }
+]

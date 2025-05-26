@@ -1,0 +1,16 @@
+[
+  {
+    "event": "秦始皇统一六国",
+    "year": -221,
+    "coordinates": [
+      34.3417,
+      108.9398
+    ],
+    "figure": [
+      "嬴政"
+    ],
+    "dynasty": "秦",
+    "description": "中国历史上首次实现大一统，建立中央集权制度",
+    "wikipedia": "https://zh.wikipedia.org/zh-hans/%E7%A7%A6%E5%A7%8B%E7%9A%87"
+  }
+]
