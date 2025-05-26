@@ -1,0 +1,32 @@
+[
+    {
+        "event": "王安石变法",
+        "year": 1069,
+        "coordinates": [
+            34.7667,
+            113.65
+        ],
+        "figure": [
+            "王安石",
+            "宋神宗"
+        ],
+        "dynasty": "北宋",
+        "description": "王安石推行新法，进行政治经济改革",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E7%8E%8B%E5%AE%89%E7%9F%B3%E8%AE%A8%E9%99%A4%E6%96%B0%E6%B3%95"
+    },
+    {
+        "event": "靖康之变",
+        "year": 1127,
+        "coordinates": [
+            34.7667,
+            113.65
+        ],
+        "figure": [
+            "宋徽宗",
+            "宋钦宗"
+        ],
+        "dynasty": "北宋/金",
+        "description": "金国攻陷汴京，北宋灭亡",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E9%9D%96%E5%BA%B7%E4%B9%8B%E5%8F%98"
+    }
+]

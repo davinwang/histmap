@@ -1,0 +1,31 @@
+[
+    {
+        "event": "靖康之变",
+        "year": 1127,
+        "coordinates": [
+            34.7583,
+            113.6286
+        ],
+        "figure": [
+            "宋徽宗",
+            "宋钦宗"
+        ],
+        "dynasty": "北宋",
+        "description": "金军攻破东京，俘虏宋徽宗、宋钦宗父子及大量赵氏皇族、后宫妃嫔与贵卿、朝臣等北上金国，北宋灭亡",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E9%9D%96%E5%BA%B7%E4%B9%8B%E5%8F%98"
+    },
+    {
+        "event": "岳飞抗金",
+        "year": 1130,
+        "coordinates": [
+            30.2583,
+            120.1286
+        ],
+        "figure": [
+            "岳飞"
+        ],
+        "dynasty": "南宋",
+        "description": "岳飞率领岳家军多次击败金军，收复失地",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%B2%B3%E9%A3%9E"
+    }
+]

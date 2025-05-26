@@ -1,0 +1,16 @@
+[
+    {
+        "event": "大禹治水",
+        "year": -2200,
+        "coordinates": [
+            34.76,
+            113.65
+        ],
+        "figure": [
+            "大禹"
+        ],
+        "dynasty": "夏朝",
+        "description": "大禹成功治理了黄河泛滥，为夏朝的建立奠定了基础",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%A4%A7%E7%A6%B9%E6%B2%BB%E6%B0%B4"
+    }
+]

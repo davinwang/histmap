@@ -1,0 +1,31 @@
+[
+    {
+        "event": "北宋建立",
+        "year": 960,
+        "coordinates": [
+            34.7667,
+            113.65
+        ],
+        "figure": [
+            "赵匡胤"
+        ],
+        "dynasty": "北宋",
+        "description": "赵匡胤发动陈桥兵变，建立宋朝，结束五代十国时期",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%8C%97%E5%AE%8B"
+    },
+    {
+        "event": "澶渊之盟",
+        "year": 1004,
+        "coordinates": [
+            35.9,
+            114.8
+        ],
+        "figure": [
+            "宋真宗",
+            "萧太后"
+        ],
+        "dynasty": "北宋/辽",
+        "description": "北宋与辽国签订和平条约，确立长期和平关系",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E6%BE%B6%E6%B8%8A%E4%B9%8B%E7%9B%9F"
+    }
+]
