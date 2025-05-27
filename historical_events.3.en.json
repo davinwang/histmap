@@ -1,0 +1,46 @@
+[
+    {
+        "event": "Battle of Red Cliffs",
+        "year": 208,
+        "coordinates": [
+            30.0,
+            114.3
+        ],
+        "figure": [
+            "Cao Cao",
+            "Liu Bei",
+            "Sun Quan"
+        ],
+        "dynasty": "Eastern Han",
+        "description": "A famous battle during the Three Kingdoms period, which laid the foundation for the tripartite division of the country",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E8%B5%A4%E5%A3%81%E4%B9%8B%E6%88%98"
+    },
+    {
+        "event": "Zhuge Liang's Northern Expeditions",
+        "year": 228,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "Zhuge Liang"
+        ],
+        "dynasty": "Shu Han",
+        "description": "Five military campaigns led by Zhuge Liang to restore the Han Dynasty against Cao Wei",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E8%AF%B8%E8%91%9B%E4%BA%AE%E5%8C%97%E4%BC%90"
+    },
+    {
+        "event": "Sima Yan Proclaims Himself Emperor",
+        "year": 265,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "Sima Yan"
+        ],
+        "dynasty": "Western Jin",
+        "description": "Sima Yan forced the Wei Emperor to abdicate, establishing the Western Jin Dynasty",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%8F%B8%E9%A9%AC%E7%82%8E"
+    }
+]

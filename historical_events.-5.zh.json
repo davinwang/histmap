@@ -1,0 +1,31 @@
+[
+    {
+        "event": "孔子出生",
+        "year": -551,
+        "coordinates": [
+            35.6,
+            117.0
+        ],
+        "figure": [
+            "孔子"
+        ],
+        "dynasty": "春秋",
+        "description": "儒家学派创始人孔子诞生于鲁国陬邑",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%AD%94%E5%AD%90"
+    },
+    {
+        "event": "吴越争霸",
+        "year": -496,
+        "coordinates": [
+            30.0,
+            120.0
+        ],
+        "figure": [
+            "勾践",
+            "夫差"
+        ],
+        "dynasty": "春秋",
+        "description": "吴国与越国之间的长期争霸战争",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%90%B4%E8%B6%8A%E4%BA%89%E9%9C%B8"
+    }
+]

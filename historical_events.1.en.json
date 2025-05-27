@@ -1,0 +1,45 @@
+[
+    {
+        "event": "Wang Mang's coup",
+        "year": 9,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "Wang Mang"
+        ],
+        "dynasty": "Xin Dynasty",
+        "description": "Wang Mang deposed the child emperor Liu Ying of Han and declared himself emperor, establishing the Xin Dynasty",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E7%8E%8B%E8%8E%BD"
+    },
+    {
+        "event": "Lülin and Chimei Uprising",
+        "year": 17,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "Wang Kuang",
+            "Wang Feng"
+        ],
+        "dynasty": "Xin Dynasty",
+        "description": "A large-scale peasant uprising against Wang Mang's rule, which eventually led to the fall of the Xin Dynasty",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E7%BB%BF%E6%9E%97%E8%B5%A4%E7%9C%89%E8%B5%B7%E4%B9%89"
+    },
+    {
+        "event": "The Restoration of Guangwu",
+        "year": 25,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "Liu Xiu"
+        ],
+        "dynasty": "Eastern Han Dynasty",
+        "description": "Liu Xiu declared himself emperor and restored the Han dynasty, starting the Guangwu Restoration",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%85%89%E6%AD%A6%E4%B8%AD%E5%85%B4"
+    }
+]

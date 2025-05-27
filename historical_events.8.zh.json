@@ -27,19 +27,5 @@
         "dynasty": "唐朝",
         "description": "唐玄宗统治前期出现的盛世，唐朝国力达到鼎盛",
         "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%BC%80%E5%85%83%E7%9B%9B%E4%B8%96"
-    },
-    {
-        "event": "武则天称帝",
-        "year": 690,
-        "coordinates": [
-            34.2583,
-            108.9286
-        ],
-        "figure": [
-            "武则天"
-        ],
-        "dynasty": "武周",
-        "description": "武则天废唐建周，成为中国历史上唯一正统女皇帝",
-        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E6%AD%A6%E5%88%99%E5%A4%A9"
     }
 ]
