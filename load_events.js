@@ -30,10 +30,10 @@ export function loadHistoricalEvents(map, lat = null, lon = null, distance = nul
     );
 
     Promise.all(centuries.map(c => 
-      fetch(`historical_events.${c}.${CURRENT_LANGUAGE}.json`)
+      fetch('historical_events/'+`historical_events.${c}.${CURRENT_LANGUAGE}.json`)
         .then(res => res.ok ? res.json() : [])
         .catch(error => {
-          console.error('部分世纪数据加载失败:', error);
+          console.info(`historical_events.${c}.${CURRENT_LANGUAGE}.json加载失败:`, error);
           return [];
         })
     ))

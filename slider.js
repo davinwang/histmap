@@ -64,7 +64,7 @@ export function setupSliderWithData(historicalSpans) {
             backBtn.className = 'nav-btn back-btn';
             backBtn.innerHTML = '&lt;';
             backBtn.addEventListener('click', () => {
-                fetch(civilization.drillup.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drillup))
+                fetch('historical_spans/' + civilization.drillup.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch('historical_spans/' + civilization.drillup))
                     .then(response => response.json())
                     .then(data => refreshSliderContainer(data));
             });
@@ -82,7 +82,7 @@ export function setupSliderWithData(historicalSpans) {
             eyeBtn.className = 'nav-btn eye-btn';
             eyeBtn.innerHTML = '👁';
             eyeBtn.addEventListener('click', () => {
-                fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
+                fetch('historical_spans/' + civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch('historical_spans/' + civilization.drilldown))
                     .then(response => response.json())
                     .then(data => refreshSliderContainer(data));
             });
@@ -122,7 +122,7 @@ function addNavigationEvents(slider, civilization) {
     // Double-click for drilldown
     slider.addEventListener('dblclick', (e) => {
         if (civilization.drilldown) {
-            fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
+            fetch('historical_spans/' + civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch('historical_spans/' + civilization.drilldown))
                 .then(response => response.json())
                 .then(data => {
                     // Clear existing sliders
@@ -140,7 +140,7 @@ function addNavigationEvents(slider, civilization) {
     slider.addEventListener('contextmenu', (e) => {
         e.preventDefault();
         if (civilization.drillup) {
-            fetch(civilization.drillup.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drillup))
+            fetch('historical_spans/' + civilization.drillup.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch('historical_spans/' + civilization.drillup))
                 .then(response => response.json())
                 .then(data => refreshSliderContainer(data)).catch(error => console.error('Drillup data loading failed:', error));
         }
@@ -150,13 +150,14 @@ function addNavigationEvents(slider, civilization) {
 export function setupSlider() {
     // Add event listener for language changes
     document.addEventListener('languageChanged', () => {
-        fetch(`historical_spans.${CURRENT_LANGUAGE}.json`).catch(() => fetch('historical_spans.json'))
+        fetch('historical_spans/' + `historical_spans.${CURRENT_LANGUAGE}.json`).catch(() => fetch('historical_spans/' + 'historical_spans.json'))
             .then(response => response.json())
             .then(data => refreshSliderContainer(data));
     });
 
     // Add slider drag functionality (same as original)
-    fetch(`historical_spans.${CURRENT_LANGUAGE}.json`).catch(() => fetch('historical_spans.json'))
+    fetch('historical_spans/' + `historical_spans.${CURRENT_LANGUAGE}.json`)
+        .catch(() => console.info('historical_spans.${CURRENT_LANGUAGE}.json加载失败，使用默认文件') || fetch('historical_spans/' + 'historical_spans.json'))
         .then(response => response.json())
         .then(historicalSpans => {
             // Process all available civilizations
@@ -179,7 +180,7 @@ export function setupSlider() {
                     eyeBtn.className = 'nav-btn eye-btn';
                     eyeBtn.innerHTML = '👁';
                     eyeBtn.addEventListener('click', () => {
-                        fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
+                        fetch('historical_spans/' + civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch('historical_spans/' + civilization.drilldown))
                             .then(response => response.json())
                             .then(data => refreshSliderContainer(data));
                     });
@@ -252,7 +253,7 @@ export function setupSlider() {
                 // Add double-click events
                 slider.addEventListener('dblclick', (e) => {
                     if (civilization.drilldown) {
-                        fetch(civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch(civilization.drilldown))
+                        fetch('historical_spans/' + civilization.drilldown.replace('.json', `.${CURRENT_LANGUAGE}.json`)).catch(() => fetch('historical_spans' + civilization.drilldown))
                             .then(response => response.json())
                             .then(data => {
                                 // Clear existing sliders
@@ -369,7 +370,7 @@ export function setupSlider() {
             thumbFrom.addEventListener('touchstart', startDrag);
             thumbTo.addEventListener('touchstart', startDrag);
         })
-        .catch(error => console.error('数据加载失败:', error));
+        .catch(error => console.info(`historical_spans.${CURRENT_LANGUAGE}.json加载失败:`, error));
 }
 
 function refreshSliderContainer(data) {
