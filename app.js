@@ -1,5 +1,5 @@
 
-import { CURRENT_LANGUAGE } from './common.js';
+import { CURRENT_LANGUAGE, setCurrentLanguage } from './common.js';
 import { setupSlider } from './slider.js';
 import { loadHistoricalEvents, fetchMongoDBEvents, fetchElasticsearchEvents } from './load_events.js';
 
@@ -9,6 +9,12 @@ Promise.all([
     () => resolve({ coords: { latitude: 30.0586, longitude: 114.3480 } }))
   )
 ]).then(([position, events]) => {
+
+  document.getElementById('language').addEventListener('change', function() {
+    setCurrentLanguage(this.value);
+    document.dispatchEvent(new CustomEvent('languageChanged'));
+  });
+  
   const map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 5);
 
   // Add OpenStreetMap base layer

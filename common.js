@@ -1,6 +1,10 @@
 
 var START_YEAR = -4000;
-export const CURRENT_LANGUAGE = document.getElementById('language')?.value || 'zh';
+export let CURRENT_LANGUAGE = document.getElementById('language')?.value || 'zh';
+
+export function setCurrentLanguage(lang) {
+  CURRENT_LANGUAGE = lang;
+}
 
 export function formatYear(year, language = CURRENT_LANGUAGE) {
     const translations = {

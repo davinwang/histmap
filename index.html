@@ -36,11 +36,6 @@
     <option value="fr" disabled=true style="color: lightgrey;">Français</option>
     <option value="es" disabled=true style="color: lightgray;">Espanol</option>
   </select>
-  <script>
-    document.getElementById('language').addEventListener('change', function() {
-      document.dispatchEvent(new CustomEvent('languageChanged'));
-    });
-  </script>
   </div>
   <script type="module" src="app.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
