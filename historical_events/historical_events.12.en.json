@@ -1,0 +1,31 @@
+[
+    {
+        "event": "Jingkang Incident",
+        "year": 1127,
+        "coordinates": [
+            34.7583,
+            113.6286
+        ],
+        "figure": [
+            "Emperor Huizong of Song",
+            "Emperor Qinzong of Song"
+        ],
+        "dynasty": "Northern Song Dynasty",
+        "description": "The Jin army broke through Dongjing, captured Emperor Huizong and Emperor Qinzong of the Song dynasty, as well as a large number of members of the Zhao royal family, palace concubines, noble ministers, and officials, leading to the fall of the Northern Song Dynasty",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E9%9D%96%E5%BA%B7%E4%B9%8B%E5%8F%98"
+    },
+    {
+        "event": "Yue Fei's Resistance Against the Jin",
+        "year": 1130,
+        "coordinates": [
+            30.2583,
+            120.1286
+        ],
+        "figure": [
+            "Yue Fei"
+        ],
+        "dynasty": "Southern Song Dynasty",
+        "description": "Yue Fei led the Yue Army to repeatedly defeat the Jin army and recover lost territories",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%B2%B3%E9%A3%9E"
+    }
+]

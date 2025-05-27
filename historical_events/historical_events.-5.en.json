@@ -1,0 +1,31 @@
+[
+    {
+        "event": "Confucius was born",
+        "year": -551,
+        "coordinates": [
+            35.6,
+            117.0
+        ],
+        "figure": [
+            "Confucius"
+        ],
+        "dynasty": "Spring and Autumn Period",
+        "description": "The founder of the Confucian school, Confucius, was born in Zouyi, Lu State",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%AD%94%E5%AD%90"
+    },
+    {
+        "event": "Wu-Yue Struggle for Supremacy",
+        "year": -496,
+        "coordinates": [
+            30.0,
+            120.0
+        ],
+        "figure": [
+            "Goujian",
+            "Fucha"
+        ],
+        "dynasty": "Spring and Autumn Period",
+        "description": "The long-term war of supremacy between the Wu and Yue states",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%90%B4%E8%B6%8A%E4%BA%89%E9%9C%B8"
+    }
+]

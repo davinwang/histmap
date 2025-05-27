@@ -1,0 +1,30 @@
+[
+    {
+        "event": "Zhou Xuanwang's Revival",
+        "year": -827,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "Zhou Xuanwang"
+        ],
+        "dynasty": "Western Zhou",
+        "description": "After ascending the throne, Zhou Xuanwang rectified the administration, which briefly restored the strength of the Zhou dynasty",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%91%A8%E5%AE%A3%E7%8E%8B"
+    },
+    {
+        "event": "People's Uprising",
+        "year": -841,
+        "coordinates": [
+            34.2583,
+            108.9286
+        ],
+        "figure": [
+            "Zhou Liwang"
+        ],
+        "dynasty": "Western Zhou",
+        "description": "A popular uprising caused by the tyrannical rule of Zhou Liwang, which led to Zhou Liwang's exile",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%9B%BD%E4%BA%BA%E6%9A%B4%E5%8A%A8"
+    }
+]

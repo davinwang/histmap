@@ -1,0 +1,49 @@
+[
+  {
+    "event": "Wuchang Uprising",
+    "year": 1911,
+    "month": 10,
+    "day": 10,
+    "coordinates": [
+      30.5355,
+      114.3055
+    ],
+    "figure": [
+      "Xiong Bengun"
+    ],
+    "dynasty": "Qing",
+    "description": "The beginning of the Xinhai Revolution, which overthrew the Qing Dynasty",
+    "wikipedia": "https://zh.wikipedia.org/zh-hans/%E6%AD%A6%E6%98%8C%E8%B5%B7%E4%B9%89"
+  },
+  {
+    "event": "Founding Ceremony",
+    "year": 1949,
+    "month": 10,
+    "day": 1,
+    "coordinates": [
+      39.9040,
+      116.4075
+    ],
+    "figure": [
+      "Mao Zedong"
+    ],
+    "dynasty": "People's Republic of China",
+    "description": "The ceremony for the establishment of the People's Republic of China",
+    "wikipedia": "https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%BC%80%E5%9B%BD%E5%A4%A7%E5%85%B8"
+  },
+  {
+    "event": "Hong Kong's Return",
+    "year": 1997,
+    "month": 7,
+    "day": 1,
+    "coordinates": [
+      22.3193,
+      114.1694
+    ],
+    "figure": [
+    ],
+    "dynasty": "People's Republic of China",
+    "description": "The Chinese government resumed sovereignty over Hong Kong",
+    "wikipedia": "https://zh.wikipedia.org/zh-hans/%E9%A6%99%E6%B8%AF%E5%9B%9E%E5%BD%92"
+  }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "event": "Founding of the Northern Song Dynasty",
+        "year": 960,
+        "coordinates": [
+            34.7667,
+            113.65
+        ],
+        "figure": [
+            "Zhao Kuanyin"
+        ],
+        "dynasty": "Northern Song",
+        "description": "Zhao Kuanyin initiated the Chenqiao Mutiny, establishing the Song Dynasty and ending the Five Dynasties and Ten Kingdoms period",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E5%8C%97%E5%AE%8B"
+    },
+    {
+        "event": "Chanyuan Treaty",
+        "year": 1004,
+        "coordinates": [
+            35.9,
+            114.8
+        ],
+        "figure": [
+            "Emperor Zhenzong of Song",
+            "Empress Dowager Xiao"
+        ],
+        "dynasty": "Northern Song/Liao",
+        "description": "The Northern Song and Liao dynasties signed a peace treaty, establishing long-term peaceful relations",
+        "wikipedia": "https://zh.wikipedia.org/zh-hans/%E6%BE%B6%E6%B8%8A%E4%B9%8B%E7%9B%9F"
+    }
+]
